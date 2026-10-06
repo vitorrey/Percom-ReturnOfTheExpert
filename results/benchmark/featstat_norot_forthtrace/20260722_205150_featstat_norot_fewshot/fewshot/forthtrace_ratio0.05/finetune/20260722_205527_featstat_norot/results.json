@@ -1,0 +1,60 @@
+{
+  "mode": "finetune",
+  "model": "featstat_norot",
+  "model_type": "resnet",
+  "dataset": "forthtrace",
+  "sensors": [
+    "LeftWrist",
+    "RightWrist",
+    "Torso",
+    "RightThigh",
+    "LeftAnkle"
+  ],
+  "weights": "pretrained/featstat_norot.pth",
+  "seed": 42,
+  "n_classes": 11,
+  "num_sensors": 5,
+  "hyperparameters": {
+    "epochs": 100,
+    "batch_size": 128,
+    "learning_rate": 0.0001,
+    "patience": 5,
+    "weight_decay": 1e-05,
+    "scheduler": "CosineAnnealingLR",
+    "optimizer": "Adam",
+    "data_ratio": 0.05
+  },
+  "fold_results": [
+    {
+      "test_f1": 0.5185930356898041,
+      "test_acc": 0.6537842190016103,
+      "test_loss": 1.3838548197646456,
+      "best_val_f1": 0.48570713211092564
+    },
+    {
+      "test_f1": 0.4857355223349582,
+      "test_acc": 0.705229793977813,
+      "test_loss": 1.2964113257388494,
+      "best_val_f1": 0.5990358677194032
+    },
+    {
+      "test_f1": 0.4236413904885501,
+      "test_acc": 0.6210526315789474,
+      "test_loss": 1.2668677247198004,
+      "best_val_f1": 0.5096015234729868
+    },
+    {
+      "test_f1": 0.6115935379891012,
+      "test_acc": 0.7387096774193549,
+      "test_loss": 0.9486800570641795,
+      "best_val_f1": 0.5563386003928259
+    }
+  ],
+  "summary": {
+    "mean_f1": 0.5098908716256034,
+    "std_f1": 0.06789995195250362,
+    "mean_acc": 0.6796940804944315,
+    "std_acc": 0.045401139294611564
+  },
+  "timestamp": "20260722_205527"
+}

@@ -1,0 +1,60 @@
+{
+  "mode": "finetune",
+  "model": "mtl",
+  "model_type": "resnet",
+  "dataset": "exoskeletons",
+  "sensors": [
+    "Chest",
+    "RightLeg",
+    "LeftLeg",
+    "RightWrist",
+    "LeftWrist"
+  ],
+  "weights": "pretrained/mtl.pth",
+  "seed": 42,
+  "n_classes": 4,
+  "num_sensors": 5,
+  "hyperparameters": {
+    "epochs": 100,
+    "batch_size": 128,
+    "learning_rate": 0.0001,
+    "patience": 5,
+    "weight_decay": 1e-05,
+    "scheduler": "CosineAnnealingLR",
+    "optimizer": "Adam",
+    "data_ratio": 0.2
+  },
+  "fold_results": [
+    {
+      "test_f1": 0.9726375917477508,
+      "test_acc": 0.9892156862745098,
+      "test_loss": 0.05253601252448325,
+      "best_val_f1": 0.9727138408622609
+    },
+    {
+      "test_f1": 0.9841423155968756,
+      "test_acc": 0.9934569247546347,
+      "test_loss": 0.04115653410503151,
+      "best_val_f1": 0.9886144925496956
+    },
+    {
+      "test_f1": 0.9886288998357964,
+      "test_acc": 0.994232987312572,
+      "test_loss": 0.029145354299237813,
+      "best_val_f1": 0.990850192220446
+    },
+    {
+      "test_f1": 0.9877890174892372,
+      "test_acc": 0.9946004319654428,
+      "test_loss": 0.017792484958376535,
+      "best_val_f1": 0.9888063718295704
+    }
+  ],
+  "summary": {
+    "mean_f1": 0.9832994561674149,
+    "std_f1": 0.0063824935487234325,
+    "mean_acc": 0.9928765075767898,
+    "std_acc": 0.00215351162516856
+  },
+  "timestamp": "20260716_234928"
+}

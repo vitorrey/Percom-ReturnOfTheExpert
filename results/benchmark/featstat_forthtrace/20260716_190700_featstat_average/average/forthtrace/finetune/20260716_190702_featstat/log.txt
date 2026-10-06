@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: featstat (Feature-regression pretrain: statistical features)
+Weights: pretrained/featstat.pth
+Loading dataset: forthtrace
+Sensors: ['LeftWrist', 'RightWrist', 'Torso', 'RightThigh', 'LeftAnkle']
+Data shape: X=(4142, 15, 150), Y=(4142,), U=(4142,)
+Classes: 11, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 23/23 [2.96s] train_loss=1.1414 val_loss=0.6926 *
+  Epoch 2/100: 100%|██████████| 23/23 [2.31s] train_loss=0.3534 val_loss=0.7193 *
+  Epoch 3/100: 100%|██████████| 23/23 [2.31s] train_loss=0.2071 val_loss=0.7123
+  Epoch 4/100: 100%|██████████| 23/23 [2.32s] train_loss=0.1556 val_loss=0.8690
+  Epoch 5/100: 100%|██████████| 23/23 [2.31s] train_loss=0.1181 val_loss=1.4025
+  Epoch 6/100: 100%|██████████| 23/23 [2.32s] train_loss=0.0779 val_loss=1.4080
+  Epoch 7/100: 100%|██████████| 23/23 [2.31s] train_loss=0.0614 val_loss=1.2380
+  Early stopping at epoch 7 (patience=5)
+Fold 1 Result: F1=0.5759, Acc=0.6747
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [2.45s] train_loss=1.1282 val_loss=0.6772 *
+  Epoch 2/100: 100%|██████████| 24/24 [2.40s] train_loss=0.3528 val_loss=0.7618 *
+  Epoch 3/100: 100%|██████████| 24/24 [2.40s] train_loss=0.1973 val_loss=0.9816 *
+  Epoch 4/100: 100%|██████████| 24/24 [2.40s] train_loss=0.1266 val_loss=0.9455 *
+  Epoch 5/100: 100%|██████████| 24/24 [2.40s] train_loss=0.1001 val_loss=1.2771
+  Epoch 6/100: 100%|██████████| 24/24 [2.40s] train_loss=0.0882 val_loss=1.9095
+  Epoch 7/100: 100%|██████████| 24/24 [2.41s] train_loss=0.0942 val_loss=1.3007
+  Epoch 8/100: 100%|██████████| 24/24 [2.41s] train_loss=0.0554 val_loss=1.5975
+  Epoch 9/100: 100%|██████████| 24/24 [2.42s] train_loss=0.0502 val_loss=1.4741
+  Early stopping at epoch 9 (patience=5)
+Fold 2 Result: F1=0.5374, Acc=0.6910
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [2.48s] train_loss=1.1301 val_loss=0.6929 *
+  Epoch 2/100: 100%|██████████| 24/24 [2.43s] train_loss=0.3441 val_loss=0.5588 *
+  Epoch 3/100: 100%|██████████| 24/24 [2.43s] train_loss=0.2320 val_loss=0.5351
+  Epoch 4/100: 100%|██████████| 24/24 [2.43s] train_loss=0.1702 val_loss=0.8362
+  Epoch 5/100: 100%|██████████| 24/24 [2.44s] train_loss=0.1257 val_loss=0.6620
+  Epoch 6/100: 100%|██████████| 24/24 [2.44s] train_loss=0.0657 val_loss=0.8254
+  Epoch 7/100: 100%|██████████| 24/24 [2.44s] train_loss=0.0480 val_loss=1.0886
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.5664, Acc=0.6295
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 23/23 [2.45s] train_loss=1.1265 val_loss=0.8865 *
+  Epoch 2/100: 100%|██████████| 23/23 [2.33s] train_loss=0.3532 val_loss=0.8546 *
+  Epoch 3/100: 100%|██████████| 23/23 [2.33s] train_loss=0.2362 val_loss=0.8752 *
+  Epoch 4/100: 100%|██████████| 23/23 [2.33s] train_loss=0.1757 val_loss=1.1187
+  Epoch 5/100: 100%|██████████| 23/23 [2.33s] train_loss=0.1100 val_loss=0.8321
+  Epoch 6/100: 100%|██████████| 23/23 [2.34s] train_loss=0.0986 val_loss=1.2214
+  Epoch 7/100: 100%|██████████| 23/23 [2.33s] train_loss=0.0734 val_loss=1.3877
+  Epoch 8/100: 100%|██████████| 23/23 [2.33s] train_loss=0.0595 val_loss=1.5750
+  Early stopping at epoch 8 (patience=5)
+Fold 4 Result: F1=0.5051, Acc=0.6726
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.5462 +/- 0.0276
+Accuracy: 0.6669 +/- 0.0228
+
+Results saved to: results/benchmark/featstat_forthtrace/20260716_190700_featstat_average/average/forthtrace/finetune/20260716_190702_featstat/results.json

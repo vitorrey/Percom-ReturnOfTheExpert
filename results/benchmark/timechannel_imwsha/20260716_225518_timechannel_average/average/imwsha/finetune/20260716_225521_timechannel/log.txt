@@ -1,0 +1,95 @@
+Using device: cuda:0
+Model: timechannel (Masked Resnet (time+channel masking))
+Weights: pretrained/timechannel.pth
+Loading dataset: imwsha
+Sensors: ['Wrist', 'Chest', 'Thigh']
+Data shape: X=(712, 9, 150), Y=(712,), U=(712,)
+Classes: 11, Sensors: 3
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 4/4 [1.14s] train_loss=2.2425 val_loss=2.2029 *
+  Epoch 2/100: 100%|██████████| 4/4 [0.25s] train_loss=1.7915 val_loss=1.9396 *
+  Epoch 3/100: 100%|██████████| 4/4 [0.25s] train_loss=1.4711 val_loss=1.6803 *
+  Epoch 4/100: 100%|██████████| 4/4 [0.25s] train_loss=1.1569 val_loss=1.4922 *
+  Epoch 5/100: 100%|██████████| 4/4 [0.25s] train_loss=0.8560 val_loss=1.3309 *
+  Epoch 6/100: 100%|██████████| 4/4 [0.25s] train_loss=0.6755 val_loss=1.2183
+  Epoch 7/100: 100%|██████████| 4/4 [0.25s] train_loss=0.5086 val_loss=1.1179
+  Epoch 8/100: 100%|██████████| 4/4 [0.25s] train_loss=0.4116 val_loss=1.0682
+  Epoch 9/100: 100%|██████████| 4/4 [0.25s] train_loss=0.2643 val_loss=1.0450
+  Epoch 10/100: 100%|██████████| 4/4 [0.25s] train_loss=0.2189 val_loss=0.9201
+  Early stopping at epoch 10 (patience=5)
+Fold 1 Result: F1=0.5829, Acc=0.6806
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 4/4 [0.38s] train_loss=2.2545 val_loss=2.1572 *
+  Epoch 2/100: 100%|██████████| 4/4 [0.25s] train_loss=1.8581 val_loss=1.8494 *
+  Epoch 3/100: 100%|██████████| 4/4 [0.25s] train_loss=1.5087 val_loss=1.5970 *
+  Epoch 4/100: 100%|██████████| 4/4 [0.25s] train_loss=1.1525 val_loss=1.4100
+  Epoch 5/100: 100%|██████████| 4/4 [0.25s] train_loss=0.9239 val_loss=1.2623 *
+  Epoch 6/100: 100%|██████████| 4/4 [0.25s] train_loss=0.6737 val_loss=1.1080 *
+  Epoch 7/100: 100%|██████████| 4/4 [0.25s] train_loss=0.4755 val_loss=1.0274
+  Epoch 8/100: 100%|██████████| 4/4 [0.25s] train_loss=0.3797 val_loss=1.0063
+  Epoch 9/100: 100%|██████████| 4/4 [0.25s] train_loss=0.2534 val_loss=1.0361
+  Epoch 10/100: 100%|██████████| 4/4 [0.25s] train_loss=0.2415 val_loss=1.0288
+  Epoch 11/100: 100%|██████████| 4/4 [0.26s] train_loss=0.1729 val_loss=1.0474
+  Early stopping at epoch 11 (patience=5)
+Fold 2 Result: F1=0.8456, Acc=0.8767
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 4/4 [0.31s] train_loss=2.2557 val_loss=2.1416 *
+  Epoch 2/100: 100%|██████████| 4/4 [0.25s] train_loss=1.8520 val_loss=1.7555 *
+  Epoch 3/100: 100%|██████████| 4/4 [0.25s] train_loss=1.5220 val_loss=1.3777 *
+  Epoch 4/100: 100%|██████████| 4/4 [0.25s] train_loss=1.2128 val_loss=1.0656 *
+  Epoch 5/100: 100%|██████████| 4/4 [0.25s] train_loss=0.9571 val_loss=0.8374 *
+  Epoch 6/100: 100%|██████████| 4/4 [0.25s] train_loss=0.6879 val_loss=0.6494 *
+  Epoch 7/100: 100%|██████████| 4/4 [0.25s] train_loss=0.5491 val_loss=0.5277
+  Epoch 8/100: 100%|██████████| 4/4 [0.25s] train_loss=0.3974 val_loss=0.4149
+  Epoch 9/100: 100%|██████████| 4/4 [0.25s] train_loss=0.2763 val_loss=0.3384
+  Epoch 10/100: 100%|██████████| 4/4 [0.25s] train_loss=0.2105 val_loss=0.2900
+  Epoch 11/100: 100%|██████████| 4/4 [0.25s] train_loss=0.1788 val_loss=0.2719 *
+  Epoch 12/100: 100%|██████████| 4/4 [0.25s] train_loss=0.1378 val_loss=0.2893 *
+  Epoch 13/100: 100%|██████████| 4/4 [0.25s] train_loss=0.1014 val_loss=0.2609 *
+  Epoch 14/100: 100%|██████████| 4/4 [0.25s] train_loss=0.0876 val_loss=0.2471
+  Epoch 15/100: 100%|██████████| 4/4 [0.25s] train_loss=0.0630 val_loss=0.1985
+  Epoch 16/100: 100%|██████████| 4/4 [0.25s] train_loss=0.0554 val_loss=0.2028
+  Epoch 17/100: 100%|██████████| 4/4 [0.25s] train_loss=0.0569 val_loss=0.2288
+  Epoch 18/100: 100%|██████████| 4/4 [0.25s] train_loss=0.0454 val_loss=0.2745
+  Early stopping at epoch 18 (patience=5)
+Fold 3 Result: F1=0.6689, Acc=0.6643
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 4/4 [0.29s] train_loss=2.2550 val_loss=2.1408 *
+  Epoch 2/100: 100%|██████████| 4/4 [0.25s] train_loss=1.9146 val_loss=1.8207 *
+  Epoch 3/100: 100%|██████████| 4/4 [0.25s] train_loss=1.5905 val_loss=1.5343 *
+  Epoch 4/100: 100%|██████████| 4/4 [0.25s] train_loss=1.2866 val_loss=1.2423 *
+  Epoch 5/100: 100%|██████████| 4/4 [0.25s] train_loss=0.9833 val_loss=1.0112 *
+  Epoch 6/100: 100%|██████████| 4/4 [0.25s] train_loss=0.6883 val_loss=0.8458 *
+  Epoch 7/100: 100%|██████████| 4/4 [0.25s] train_loss=0.5637 val_loss=0.7185 *
+  Epoch 8/100: 100%|██████████| 4/4 [0.25s] train_loss=0.3969 val_loss=0.6160 *
+  Epoch 9/100: 100%|██████████| 4/4 [0.25s] train_loss=0.3197 val_loss=0.5872
+  Epoch 10/100: 100%|██████████| 4/4 [0.25s] train_loss=0.2423 val_loss=0.5681
+  Epoch 11/100: 100%|██████████| 4/4 [0.25s] train_loss=0.1567 val_loss=0.5572
+  Epoch 12/100: 100%|██████████| 4/4 [0.25s] train_loss=0.1462 val_loss=0.5434 *
+  Epoch 13/100: 100%|██████████| 4/4 [0.25s] train_loss=0.1387 val_loss=0.5136
+  Epoch 14/100: 100%|██████████| 4/4 [0.25s] train_loss=0.0970 val_loss=0.5296
+  Epoch 15/100: 100%|██████████| 4/4 [0.25s] train_loss=0.0860 val_loss=0.5406
+  Epoch 16/100: 100%|██████████| 4/4 [0.25s] train_loss=0.0763 val_loss=0.5192
+  Epoch 17/100: 100%|██████████| 4/4 [0.25s] train_loss=0.0503 val_loss=0.5053
+  Early stopping at epoch 17 (patience=5)
+Fold 4 Result: F1=0.9679, Acc=0.9643
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.7663 +/- 0.1500
+Accuracy: 0.7965 +/- 0.1280
+
+Results saved to: results/benchmark/timechannel_imwsha/20260716_225518_timechannel_average/average/imwsha/finetune/20260716_225521_timechannel/results.json

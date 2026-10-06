@@ -1,0 +1,69 @@
+Using device: cuda:0
+Model: featunion (Feature-regression pretrain: union of all three banks (deduped))
+Weights: pretrained/featunion.pth
+Loading dataset: vtt_coniot
+Sensors: ['Hip', 'Back', 'UpperArm']
+Data shape: X=(3933, 9, 150), Y=(3933,), U=(3933,)
+Classes: 16, Sensors: 3
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 22/22 [1.37s] train_loss=1.0662 val_loss=2.4336 *
+  Epoch 2/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0640 val_loss=2.8189 *
+  Epoch 3/100: 100%|██████████| 22/22 [1.05s] train_loss=0.0130 val_loss=2.8781 *
+  Epoch 4/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0074 val_loss=2.9250 *
+  Epoch 5/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0049 val_loss=2.9849
+  Epoch 6/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0039 val_loss=3.0081
+  Epoch 7/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0031 val_loss=3.0526
+  Epoch 8/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0025 val_loss=3.0932
+  Epoch 9/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0021 val_loss=3.2942
+  Early stopping at epoch 9 (patience=5)
+Fold 1 Result: F1=0.1959, Acc=0.3026
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 22/22 [1.06s] train_loss=1.1181 val_loss=2.1741 *
+  Epoch 2/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0641 val_loss=2.2537
+  Epoch 3/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0127 val_loss=2.3437
+  Epoch 4/100: 100%|██████████| 22/22 [1.00s] train_loss=0.0069 val_loss=2.3612
+  Epoch 5/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0050 val_loss=2.3969
+  Epoch 6/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0039 val_loss=2.4179
+  Early stopping at epoch 6 (patience=5)
+Fold 2 Result: F1=0.2035, Acc=0.2648
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 22/22 [0.99s] train_loss=1.0677 val_loss=2.0240 *
+  Epoch 2/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0554 val_loss=2.0240
+  Epoch 3/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0116 val_loss=2.0368
+  Epoch 4/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0067 val_loss=2.0300
+  Epoch 5/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0051 val_loss=2.0645
+  Epoch 6/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0037 val_loss=2.0948
+  Early stopping at epoch 6 (patience=5)
+Fold 3 Result: F1=0.3064, Acc=0.3922
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 22/22 [0.99s] train_loss=1.0662 val_loss=2.1302 *
+  Epoch 2/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0596 val_loss=2.0743 *
+  Epoch 3/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0129 val_loss=2.0815
+  Epoch 4/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0073 val_loss=2.0834 *
+  Epoch 5/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0046 val_loss=2.1059
+  Epoch 6/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0037 val_loss=2.1395
+  Epoch 7/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0029 val_loss=2.1057
+  Epoch 8/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0025 val_loss=2.1295
+  Epoch 9/100: 100%|██████████| 22/22 [0.99s] train_loss=0.0021 val_loss=2.1386
+  Early stopping at epoch 9 (patience=5)
+Fold 4 Result: F1=0.3354, Acc=0.4293
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.2603 +/- 0.0615
+Accuracy: 0.3472 +/- 0.0662
+
+Results saved to: results/benchmark/featunion_vtt_coniot/20260720_143118_featunion_fewshot/fewshot/vtt_coniot_ratio0.01/finetune/20260720_143120_featunion/results.json

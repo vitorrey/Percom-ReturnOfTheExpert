@@ -1,0 +1,72 @@
+Using device: cuda:0
+Model: featunion_norot (Feature-regression (union), no rotation aug)
+Weights: pretrained/featunion_norot.pth
+Loading dataset: mhealth
+Sensors: ['Chest', 'LeftAnkle', 'RightWrist']
+Data shape: X=(2117, 9, 150), Y=(2117,), U=(2117,)
+Classes: 12, Sensors: 3
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 10/10 [1.17s] train_loss=1.5206 val_loss=0.9218 *
+  Epoch 2/100: 100%|██████████| 10/10 [0.64s] train_loss=0.3596 val_loss=0.3833 *
+  Epoch 3/100: 100%|██████████| 10/10 [0.64s] train_loss=0.0770 val_loss=0.3896
+  Epoch 4/100: 100%|██████████| 10/10 [0.64s] train_loss=0.0260 val_loss=0.4446 *
+  Epoch 5/100: 100%|██████████| 10/10 [0.65s] train_loss=0.0131 val_loss=0.5324
+  Epoch 6/100: 100%|██████████| 10/10 [0.72s] train_loss=0.0093 val_loss=0.3898
+  Epoch 7/100: 100%|██████████| 10/10 [0.64s] train_loss=0.0067 val_loss=0.3786
+  Epoch 8/100: 100%|██████████| 10/10 [0.64s] train_loss=0.0100 val_loss=0.4135
+  Epoch 9/100: 100%|██████████| 10/10 [0.65s] train_loss=0.0055 val_loss=0.3980
+  Early stopping at epoch 9 (patience=5)
+Fold 1 Result: F1=0.9213, Acc=0.9224
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 10/10 [0.70s] train_loss=1.5167 val_loss=0.8430 *
+  Epoch 2/100: 100%|██████████| 10/10 [0.65s] train_loss=0.3735 val_loss=0.1722 *
+  Epoch 3/100: 100%|██████████| 10/10 [0.65s] train_loss=0.0973 val_loss=0.1933
+  Epoch 4/100: 100%|██████████| 10/10 [0.65s] train_loss=0.0489 val_loss=0.0402
+  Epoch 5/100: 100%|██████████| 10/10 [0.65s] train_loss=0.0205 val_loss=0.0255
+  Epoch 6/100: 100%|██████████| 10/10 [0.65s] train_loss=0.0114 val_loss=0.0435
+  Epoch 7/100: 100%|██████████| 10/10 [0.65s] train_loss=0.0070 val_loss=0.0375
+  Early stopping at epoch 7 (patience=5)
+Fold 2 Result: F1=0.9286, Acc=0.9294
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 11/11 [0.77s] train_loss=1.5026 val_loss=0.7420 *
+  Epoch 2/100: 100%|██████████| 11/11 [0.69s] train_loss=0.3634 val_loss=0.1825
+  Epoch 3/100: 100%|██████████| 11/11 [0.69s] train_loss=0.0819 val_loss=0.1424
+  Epoch 4/100: 100%|██████████| 11/11 [0.69s] train_loss=0.0606 val_loss=0.1866
+  Epoch 5/100: 100%|██████████| 11/11 [0.69s] train_loss=0.0516 val_loss=0.0278 *
+  Epoch 6/100: 100%|██████████| 11/11 [0.69s] train_loss=0.0259 val_loss=0.0726
+  Epoch 7/100: 100%|██████████| 11/11 [0.69s] train_loss=0.0183 val_loss=0.0269
+  Epoch 8/100: 100%|██████████| 11/11 [0.69s] train_loss=0.0179 val_loss=0.0178
+  Epoch 9/100: 100%|██████████| 11/11 [0.69s] train_loss=0.0112 val_loss=0.0181
+  Epoch 10/100: 100%|██████████| 11/11 [0.69s] train_loss=0.0163 val_loss=0.1296
+  Early stopping at epoch 10 (patience=5)
+Fold 3 Result: F1=0.9458, Acc=0.9413
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 10/10 [0.64s] train_loss=1.4970 val_loss=0.9719 *
+  Epoch 2/100: 100%|██████████| 10/10 [0.64s] train_loss=0.3779 val_loss=0.2772 *
+  Epoch 3/100: 100%|██████████| 10/10 [0.64s] train_loss=0.0863 val_loss=0.3542
+  Epoch 4/100: 100%|██████████| 10/10 [0.64s] train_loss=0.0394 val_loss=0.3166
+  Epoch 5/100: 100%|██████████| 10/10 [0.64s] train_loss=0.0215 val_loss=0.2845
+  Epoch 6/100: 100%|██████████| 10/10 [0.65s] train_loss=0.0116 val_loss=0.2677
+  Epoch 7/100: 100%|██████████| 10/10 [0.64s] train_loss=0.0100 val_loss=0.1391
+  Early stopping at epoch 7 (patience=5)
+Fold 4 Result: F1=0.9556, Acc=0.9537
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.9378 +/- 0.0136
+Accuracy: 0.9367 +/- 0.0119
+
+Results saved to: results/benchmark/featunion_norot_mhealth/20260722_230548_featunion_norot_average/average/mhealth/finetune/20260722_230552_featunion_norot/results.json

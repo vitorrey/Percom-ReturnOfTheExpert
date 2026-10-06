@@ -1,0 +1,56 @@
+{
+  "mode": "finetune",
+  "model": "timechannel",
+  "model_type": "maskedresnet",
+  "dataset": "imwsha",
+  "sensors": [
+    "Wrist"
+  ],
+  "weights": "pretrained/timechannel.pth",
+  "seed": 42,
+  "n_classes": 11,
+  "num_sensors": 1,
+  "hyperparameters": {
+    "epochs": 100,
+    "batch_size": 128,
+    "learning_rate": 0.0001,
+    "patience": 5,
+    "weight_decay": 1e-05,
+    "scheduler": "CosineAnnealingLR",
+    "optimizer": "Adam",
+    "data_ratio": 1.0
+  },
+  "fold_results": [
+    {
+      "test_f1": 0.4496516267093091,
+      "test_acc": 0.4930555555555556,
+      "test_loss": 1.6548528406355116,
+      "best_val_f1": 0.5222979522447607
+    },
+    {
+      "test_f1": 0.7368903278612897,
+      "test_acc": 0.7671232876712328,
+      "test_loss": 0.8392482032514599,
+      "best_val_f1": 0.5395096525577809
+    },
+    {
+      "test_f1": 0.5382132821676868,
+      "test_acc": 0.5734265734265734,
+      "test_loss": 1.6098387708197106,
+      "best_val_f1": 0.8331368809443677
+    },
+    {
+      "test_f1": 0.7421166796166797,
+      "test_acc": 0.8428571428571429,
+      "test_loss": 0.6253035528319223,
+      "best_val_f1": 0.6749411215080454
+    }
+  ],
+  "summary": {
+    "mean_f1": 0.6167179790887414,
+    "std_f1": 0.1267284311427805,
+    "mean_acc": 0.6691156398776262,
+    "std_acc": 0.14137287541585342
+  },
+  "timestamp": "20260716_225608"
+}

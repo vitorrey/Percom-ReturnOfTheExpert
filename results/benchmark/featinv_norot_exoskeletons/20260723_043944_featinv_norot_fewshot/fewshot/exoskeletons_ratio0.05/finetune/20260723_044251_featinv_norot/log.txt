@@ -1,0 +1,71 @@
+Using device: cuda:0
+Model: featinv_norot (Feature-regression (invariant), no rotation aug)
+Weights: pretrained/featinv_norot.pth
+Loading dataset: exoskeletons
+Sensors: ['Chest', 'RightLeg', 'LeftLeg', 'RightWrist', 'LeftWrist']
+Data shape: X=(5678, 15, 150), Y=(5678,), U=(5678,)
+Classes: 4, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.62s] train_loss=0.2046 val_loss=0.0413 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.02s] train_loss=0.0008 val_loss=0.0390
+  Epoch 3/100: 100%|██████████| 25/25 [2.01s] train_loss=0.0003 val_loss=0.0374 *
+  Epoch 4/100: 100%|██████████| 25/25 [2.02s] train_loss=0.0002 val_loss=0.0364 *
+  Epoch 5/100: 100%|██████████| 25/25 [1.88s] train_loss=0.0002 val_loss=0.0381
+  Epoch 6/100: 100%|██████████| 25/25 [1.89s] train_loss=0.0001 val_loss=0.0386 *
+  Epoch 7/100: 100%|██████████| 25/25 [1.89s] train_loss=0.0001 val_loss=0.0394
+  Epoch 8/100: 100%|██████████| 25/25 [1.88s] train_loss=0.0001 val_loss=0.0399
+  Epoch 9/100: 100%|██████████| 25/25 [1.89s] train_loss=0.0001 val_loss=0.0404
+  Epoch 10/100: 100%|██████████| 25/25 [1.89s] train_loss=0.0001 val_loss=0.0417
+  Epoch 11/100: 100%|██████████| 25/25 [1.89s] train_loss=0.0001 val_loss=0.0407
+  Early stopping at epoch 11 (patience=5)
+Fold 1 Result: F1=0.9857, Acc=0.9922
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.89s] train_loss=0.1962 val_loss=0.0422 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0008 val_loss=0.0365 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0003 val_loss=0.0378
+  Epoch 4/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0002 val_loss=0.0403
+  Epoch 5/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0002 val_loss=0.0417
+  Epoch 6/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0002 val_loss=0.0441
+  Epoch 7/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0002 val_loss=0.0417
+  Early stopping at epoch 7 (patience=5)
+Fold 2 Result: F1=0.9533, Acc=0.9815
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.95s] train_loss=0.2036 val_loss=0.0342 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.88s] train_loss=0.0008 val_loss=0.0273 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.88s] train_loss=0.0003 val_loss=0.0244
+  Epoch 4/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0003 val_loss=0.0247
+  Epoch 5/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0002 val_loss=0.0273
+  Epoch 6/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0001 val_loss=0.0238
+  Epoch 7/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0001 val_loss=0.0268
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.9844, Acc=0.9919
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.87s] train_loss=0.1990 val_loss=0.0372 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0007 val_loss=0.0430 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0003 val_loss=0.0419
+  Epoch 4/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0002 val_loss=0.0426
+  Epoch 5/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0002 val_loss=0.0441
+  Epoch 6/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0002 val_loss=0.0429
+  Epoch 7/100: 100%|██████████| 25/25 [1.87s] train_loss=0.0002 val_loss=0.0435
+  Early stopping at epoch 7 (patience=5)
+Fold 4 Result: F1=0.9568, Acc=0.9860
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.9701 +/- 0.0151
+Accuracy: 0.9879 +/- 0.0045
+
+Results saved to: results/benchmark/featinv_norot_exoskeletons/20260723_043944_featinv_norot_fewshot/fewshot/exoskeletons_ratio0.05/finetune/20260723_044251_featinv_norot/results.json

@@ -1,0 +1,71 @@
+Using device: cuda:0
+Model: featunion_norot (Feature-regression (union), no rotation aug)
+Weights: pretrained/featunion_norot.pth
+Loading dataset: realworld
+Sensors: ['Forearm']
+Data shape: X=(20680, 3, 150), Y=(20680,), U=(20680,)
+Classes: 8, Sensors: 1
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.87s] train_loss=1.2625 val_loss=0.9803 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.50s] train_loss=0.5726 val_loss=0.8245 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.50s] train_loss=0.4344 val_loss=0.9513
+  Epoch 4/100: 100%|██████████| 25/25 [0.50s] train_loss=0.3834 val_loss=0.8289
+  Epoch 5/100: 100%|██████████| 25/25 [0.50s] train_loss=0.3276 val_loss=0.7965
+  Epoch 6/100: 100%|██████████| 25/25 [0.50s] train_loss=0.3016 val_loss=0.7615
+  Epoch 7/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2690 val_loss=1.2591
+  Early stopping at epoch 7 (patience=5)
+Fold 1 Result: F1=0.7392, Acc=0.6921
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.53s] train_loss=1.2762 val_loss=1.0753 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.51s] train_loss=0.5717 val_loss=0.8696 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.51s] train_loss=0.3676 val_loss=1.0117
+  Epoch 4/100: 100%|██████████| 25/25 [0.51s] train_loss=0.3101 val_loss=0.8208
+  Epoch 5/100: 100%|██████████| 25/25 [0.51s] train_loss=0.2855 val_loss=1.0165
+  Epoch 6/100: 100%|██████████| 25/25 [0.51s] train_loss=0.2332 val_loss=1.0739
+  Epoch 7/100: 100%|██████████| 25/25 [0.51s] train_loss=0.2288 val_loss=0.8719
+  Early stopping at epoch 7 (patience=5)
+Fold 2 Result: F1=0.7526, Acc=0.7134
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.51s] train_loss=1.2682 val_loss=1.1451 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.50s] train_loss=0.5536 val_loss=0.8942 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.50s] train_loss=0.3787 val_loss=0.9204 *
+  Epoch 4/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2930 val_loss=0.9605
+  Epoch 5/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2754 val_loss=0.9813
+  Epoch 6/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2446 val_loss=0.9131 *
+  Epoch 7/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2729 val_loss=1.3690
+  Epoch 8/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2505 val_loss=1.0013
+  Epoch 9/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2348 val_loss=1.1864
+  Epoch 10/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2210 val_loss=1.2551
+  Epoch 11/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2188 val_loss=1.1055
+  Early stopping at epoch 11 (patience=5)
+Fold 3 Result: F1=0.6659, Acc=0.6516
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.49s] train_loss=1.2910 val_loss=0.9644 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.48s] train_loss=0.5587 val_loss=0.7482 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.48s] train_loss=0.4015 val_loss=1.0194
+  Epoch 4/100: 100%|██████████| 25/25 [0.48s] train_loss=0.3650 val_loss=1.0248
+  Epoch 5/100: 100%|██████████| 25/25 [0.48s] train_loss=0.3654 val_loss=0.8692
+  Epoch 6/100: 100%|██████████| 25/25 [0.48s] train_loss=0.3044 val_loss=1.0635
+  Epoch 7/100: 100%|██████████| 25/25 [0.48s] train_loss=0.2568 val_loss=1.7855
+  Early stopping at epoch 7 (patience=5)
+Fold 4 Result: F1=0.7364, Acc=0.7106
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.7235 +/- 0.0338
+Accuracy: 0.6919 +/- 0.0247
+
+Results saved to: results/benchmark/featunion_norot_realworld/20260722_225617_featunion_norot_position/position/realworld_Forearm/finetune/20260722_225620_featunion_norot/results.json

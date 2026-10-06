@@ -1,0 +1,65 @@
+Using device: cuda:0
+Model: featinv (Feature-regression pretrain: invariant physical features)
+Weights: pretrained/featinv.pth
+Loading dataset: ucaehar
+Sensors: ['SmartGlasses']
+Data shape: X=(7162, 3, 150), Y=(7162,), U=(7162,)
+Classes: 6, Sensors: 1
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.15s] train_loss=0.8076 val_loss=0.7875 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.63s] train_loss=0.1058 val_loss=0.7875
+  Epoch 3/100: 100%|██████████| 25/25 [0.60s] train_loss=0.0261 val_loss=0.8880
+  Epoch 4/100: 100%|██████████| 25/25 [0.59s] train_loss=0.0122 val_loss=0.9770
+  Epoch 5/100: 100%|██████████| 25/25 [0.59s] train_loss=0.0083 val_loss=1.0435
+  Epoch 6/100: 100%|██████████| 25/25 [0.69s] train_loss=0.0059 val_loss=1.0547
+  Early stopping at epoch 6 (patience=5)
+Fold 1 Result: F1=0.7275, Acc=0.7312
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.70s] train_loss=0.8221 val_loss=1.0060 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.68s] train_loss=0.0896 val_loss=1.2139
+  Epoch 3/100: 100%|██████████| 25/25 [0.71s] train_loss=0.0343 val_loss=1.6204
+  Epoch 4/100: 100%|██████████| 25/25 [0.71s] train_loss=0.0129 val_loss=1.4709
+  Epoch 5/100: 100%|██████████| 25/25 [0.71s] train_loss=0.0083 val_loss=1.4870
+  Epoch 6/100: 100%|██████████| 25/25 [0.72s] train_loss=0.0058 val_loss=1.5231
+  Early stopping at epoch 6 (patience=5)
+Fold 2 Result: F1=0.5692, Acc=0.6521
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.61s] train_loss=0.8230 val_loss=0.9571 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.59s] train_loss=0.1046 val_loss=0.9237 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.59s] train_loss=0.0241 val_loss=0.9259 *
+  Epoch 4/100: 100%|██████████| 25/25 [0.59s] train_loss=0.0126 val_loss=0.9748
+  Epoch 5/100: 100%|██████████| 25/25 [0.58s] train_loss=0.0083 val_loss=1.0297
+  Epoch 6/100: 100%|██████████| 25/25 [0.59s] train_loss=0.0056 val_loss=1.0143
+  Epoch 7/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0042 val_loss=1.0795
+  Epoch 8/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0037 val_loss=1.1034
+  Early stopping at epoch 8 (patience=5)
+Fold 3 Result: F1=0.6216, Acc=0.7345
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.59s] train_loss=0.8032 val_loss=0.8063 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.59s] train_loss=0.0939 val_loss=1.0572
+  Epoch 3/100: 100%|██████████| 25/25 [0.61s] train_loss=0.0240 val_loss=1.0956
+  Epoch 4/100: 100%|██████████| 25/25 [0.59s] train_loss=0.0120 val_loss=1.2570
+  Epoch 5/100: 100%|██████████| 25/25 [0.59s] train_loss=0.0084 val_loss=1.2726
+  Epoch 6/100: 100%|██████████| 25/25 [0.60s] train_loss=0.0075 val_loss=1.3351
+  Early stopping at epoch 6 (patience=5)
+Fold 4 Result: F1=0.5432, Acc=0.5976
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.6154 +/- 0.0706
+Accuracy: 0.6788 +/- 0.0574
+
+Results saved to: results/benchmark/featinv_ucaehar/20260716_185628_featinv_fewshot/fewshot/ucaehar_ratio0.01/finetune/20260716_185631_featinv/results.json

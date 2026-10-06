@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: featunion (Feature-regression pretrain: union of all three banks (deduped))
+Weights: pretrained/featunion.pth
+Loading dataset: forthtrace
+Sensors: ['LeftWrist', 'RightWrist', 'Torso', 'RightThigh', 'LeftAnkle']
+Data shape: X=(4142, 15, 150), Y=(4142,), U=(4142,)
+Classes: 11, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 23/23 [5.37s] train_loss=0.6516 val_loss=1.1416 *
+  Epoch 2/100: 100%|██████████| 23/23 [4.77s] train_loss=0.0158 val_loss=1.4948 *
+  Epoch 3/100: 100%|██████████| 23/23 [4.77s] train_loss=0.0072 val_loss=1.4317
+  Epoch 4/100: 100%|██████████| 23/23 [4.75s] train_loss=0.0022 val_loss=1.3972
+  Epoch 5/100: 100%|██████████| 23/23 [4.75s] train_loss=0.0015 val_loss=1.3992
+  Epoch 6/100: 100%|██████████| 23/23 [4.72s] train_loss=0.0011 val_loss=1.4264
+  Epoch 7/100: 100%|██████████| 23/23 [4.79s] train_loss=0.0009 val_loss=1.4333
+  Early stopping at epoch 7 (patience=5)
+Fold 1 Result: F1=0.4200, Acc=0.6119
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [4.95s] train_loss=0.6200 val_loss=0.7722 *
+  Epoch 2/100: 100%|██████████| 24/24 [4.89s] train_loss=0.0127 val_loss=1.2363
+  Epoch 3/100: 100%|██████████| 24/24 [4.89s] train_loss=0.0028 val_loss=1.1872
+  Epoch 4/100: 100%|██████████| 24/24 [4.89s] train_loss=0.0015 val_loss=1.1897
+  Epoch 5/100: 100%|██████████| 24/24 [4.90s] train_loss=0.0011 val_loss=1.2772
+  Epoch 6/100: 100%|██████████| 24/24 [4.88s] train_loss=0.0009 val_loss=1.2603
+  Early stopping at epoch 6 (patience=5)
+Fold 2 Result: F1=0.5314, Acc=0.7274
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [5.05s] train_loss=0.6524 val_loss=1.0079 *
+  Epoch 2/100: 100%|██████████| 24/24 [4.97s] train_loss=0.0137 val_loss=0.8630 *
+  Epoch 3/100: 100%|██████████| 24/24 [4.97s] train_loss=0.0034 val_loss=0.9277
+  Epoch 4/100: 100%|██████████| 24/24 [4.99s] train_loss=0.0021 val_loss=0.9382
+  Epoch 5/100: 100%|██████████| 24/24 [4.97s] train_loss=0.0017 val_loss=0.9625
+  Epoch 6/100: 100%|██████████| 24/24 [4.95s] train_loss=0.0074 val_loss=1.0538
+  Epoch 7/100: 100%|██████████| 24/24 [4.90s] train_loss=0.0028 val_loss=1.3393
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.3230, Acc=0.5495
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 23/23 [4.83s] train_loss=0.6229 val_loss=1.4175 *
+  Epoch 2/100: 100%|██████████| 23/23 [4.75s] train_loss=0.0129 val_loss=1.6957 *
+  Epoch 3/100: 100%|██████████| 23/23 [4.83s] train_loss=0.0028 val_loss=1.6865 *
+  Epoch 4/100: 100%|██████████| 23/23 [4.75s] train_loss=0.0017 val_loss=1.8007
+  Epoch 5/100: 100%|██████████| 23/23 [4.74s] train_loss=0.0013 val_loss=1.7941
+  Epoch 6/100: 100%|██████████| 23/23 [4.73s] train_loss=0.0010 val_loss=1.8051 *
+  Epoch 7/100: 100%|██████████| 23/23 [4.79s] train_loss=0.0008 val_loss=1.8851
+  Epoch 8/100: 100%|██████████| 23/23 [4.79s] train_loss=0.0006 val_loss=1.8965
+  Epoch 9/100: 100%|██████████| 23/23 [4.83s] train_loss=0.0006 val_loss=1.9856
+  Epoch 10/100: 100%|██████████| 23/23 [4.82s] train_loss=0.0005 val_loss=1.9562
+  Epoch 11/100: 100%|██████████| 23/23 [4.84s] train_loss=0.0004 val_loss=2.0087
+  Early stopping at epoch 11 (patience=5)
+Fold 4 Result: F1=0.4569, Acc=0.5919
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.4328 +/- 0.0751
+Accuracy: 0.6202 +/- 0.0659
+
+Results saved to: results/benchmark/featunion_forthtrace/20260720_105005_featunion_fewshot/fewshot/forthtrace_ratio0.02/finetune/20260720_105308_featunion/results.json

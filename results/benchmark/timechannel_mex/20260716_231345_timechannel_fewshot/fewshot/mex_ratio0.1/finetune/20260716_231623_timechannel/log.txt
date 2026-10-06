@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: timechannel (Masked Resnet (time+channel masking))
+Weights: pretrained/timechannel.pth
+Loading dataset: mex
+Sensors: ['Wrist', 'Thigh']
+Data shape: X=(4103, 6, 150), Y=(4103,), U=(4103,)
+Classes: 7, Sensors: 2
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.53s] train_loss=1.3196 val_loss=0.8009 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.05s] train_loss=0.4095 val_loss=0.2984 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.05s] train_loss=0.1340 val_loss=0.3202
+  Epoch 4/100: 100%|██████████| 25/25 [1.05s] train_loss=0.0535 val_loss=0.2601
+  Epoch 5/100: 100%|██████████| 25/25 [1.05s] train_loss=0.0313 val_loss=0.2463
+  Epoch 6/100: 100%|██████████| 25/25 [1.05s] train_loss=0.0208 val_loss=0.2826
+  Epoch 7/100: 100%|██████████| 25/25 [1.05s] train_loss=0.0130 val_loss=0.2325
+  Early stopping at epoch 7 (patience=5)
+Fold 1 Result: F1=0.8404, Acc=0.8516
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.07s] train_loss=1.3061 val_loss=1.3454 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.06s] train_loss=0.3523 val_loss=0.7281 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.06s] train_loss=0.1042 val_loss=0.6265 *
+  Epoch 4/100: 100%|██████████| 25/25 [1.06s] train_loss=0.0547 val_loss=0.8252
+  Epoch 5/100: 100%|██████████| 25/25 [1.05s] train_loss=0.0256 val_loss=0.8891
+  Epoch 6/100: 100%|██████████| 25/25 [1.06s] train_loss=0.0234 val_loss=0.8495
+  Epoch 7/100: 100%|██████████| 25/25 [1.05s] train_loss=0.0144 val_loss=1.1419
+  Epoch 8/100: 100%|██████████| 25/25 [1.06s] train_loss=0.0078 val_loss=1.0740
+  Early stopping at epoch 8 (patience=5)
+Fold 2 Result: F1=0.8748, Acc=0.8519
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.07s] train_loss=1.3517 val_loss=0.9275 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.05s] train_loss=0.3971 val_loss=0.5839 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.06s] train_loss=0.1061 val_loss=0.4839
+  Epoch 4/100: 100%|██████████| 25/25 [1.05s] train_loss=0.0523 val_loss=0.5052
+  Epoch 5/100: 100%|██████████| 25/25 [1.06s] train_loss=0.0392 val_loss=0.4513
+  Epoch 6/100: 100%|██████████| 25/25 [1.06s] train_loss=0.0224 val_loss=0.4094
+  Epoch 7/100: 100%|██████████| 25/25 [1.05s] train_loss=0.0211 val_loss=0.3759
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.7895, Acc=0.7820
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.06s] train_loss=1.2790 val_loss=0.9750 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.06s] train_loss=0.3782 val_loss=0.6594
+  Epoch 3/100: 100%|██████████| 25/25 [1.06s] train_loss=0.1030 val_loss=0.7257 *
+  Epoch 4/100: 100%|██████████| 25/25 [1.06s] train_loss=0.0460 val_loss=0.6970 *
+  Epoch 5/100: 100%|██████████| 25/25 [1.06s] train_loss=0.0240 val_loss=0.5234
+  Epoch 6/100: 100%|██████████| 25/25 [1.06s] train_loss=0.0242 val_loss=0.7948
+  Epoch 7/100: 100%|██████████| 25/25 [1.06s] train_loss=0.0117 val_loss=0.7394
+  Epoch 8/100: 100%|██████████| 25/25 [1.06s] train_loss=0.0049 val_loss=0.8658
+  Epoch 9/100: 100%|██████████| 25/25 [1.06s] train_loss=0.0039 val_loss=0.6740
+  Early stopping at epoch 9 (patience=5)
+Fold 4 Result: F1=0.8202, Acc=0.7986
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.8312 +/- 0.0310
+Accuracy: 0.8210 +/- 0.0313
+
+Results saved to: results/benchmark/timechannel_mex/20260716_231345_timechannel_fewshot/fewshot/mex_ratio0.1/finetune/20260716_231623_timechannel/results.json

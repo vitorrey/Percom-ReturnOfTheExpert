@@ -1,0 +1,68 @@
+Using device: cuda:0
+Model: featstat_norot (Feature-regression (statistical), no rotation aug)
+Weights: pretrained/featstat_norot.pth
+Loading dataset: ward
+Sensors: ['LeftArm', 'RightArm', 'Waist', 'LeftAnkle', 'RightAnkle']
+Data shape: X=(7931, 15, 150), Y=(7931,), U=(7931,)
+Classes: 13, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [85.08s] train_loss=0.7894 val_loss=0.3721 *
+  Epoch 2/100: 100%|██████████| 25/25 [84.68s] train_loss=0.0112 val_loss=0.2146 *
+  Epoch 3/100: 100%|██████████| 25/25 [84.68s] train_loss=0.0034 val_loss=0.2164 *
+  Epoch 4/100: 100%|██████████| 25/25 [84.66s] train_loss=0.0021 val_loss=0.2161 *
+  Epoch 5/100: 100%|██████████| 25/25 [84.65s] train_loss=0.0015 val_loss=0.2133
+  Epoch 6/100: 100%|██████████| 25/25 [84.69s] train_loss=0.0013 val_loss=0.2037
+  Epoch 7/100: 100%|██████████| 25/25 [84.67s] train_loss=0.0011 val_loss=0.2277
+  Epoch 8/100: 100%|██████████| 25/25 [84.68s] train_loss=0.0009 val_loss=0.2299
+  Epoch 9/100: 100%|██████████| 25/25 [84.68s] train_loss=0.0007 val_loss=0.2253
+  Early stopping at epoch 9 (patience=5)
+Fold 1 Result: F1=0.8615, Acc=0.8703
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [84.67s] train_loss=0.8246 val_loss=0.2578 *
+  Epoch 2/100: 100%|██████████| 25/25 [84.66s] train_loss=0.0136 val_loss=0.1814
+  Epoch 3/100: 100%|██████████| 25/25 [84.68s] train_loss=0.0043 val_loss=0.1590
+  Epoch 4/100: 100%|██████████| 25/25 [84.66s] train_loss=0.0026 val_loss=0.1605
+  Epoch 5/100: 100%|██████████| 25/25 [84.65s] train_loss=0.0016 val_loss=0.1528
+  Epoch 6/100: 100%|██████████| 25/25 [84.65s] train_loss=0.0013 val_loss=0.1541
+  Early stopping at epoch 6 (patience=5)
+Fold 2 Result: F1=0.9520, Acc=0.9516
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [84.68s] train_loss=0.8004 val_loss=0.5246 *
+  Epoch 2/100: 100%|██████████| 25/25 [84.69s] train_loss=0.0113 val_loss=0.4587 *
+  Epoch 3/100: 100%|██████████| 25/25 [84.68s] train_loss=0.0027 val_loss=0.4359 *
+  Epoch 4/100: 100%|██████████| 25/25 [84.68s] train_loss=0.0018 val_loss=0.4532
+  Epoch 5/100: 100%|██████████| 25/25 [84.65s] train_loss=0.0014 val_loss=0.4698
+  Epoch 6/100: 100%|██████████| 25/25 [84.67s] train_loss=0.0012 val_loss=0.4765
+  Epoch 7/100: 100%|██████████| 25/25 [84.65s] train_loss=0.0009 val_loss=0.4630
+  Epoch 8/100: 100%|██████████| 25/25 [84.64s] train_loss=0.0008 val_loss=0.4877
+  Early stopping at epoch 8 (patience=5)
+Fold 3 Result: F1=0.9899, Acc=0.9893
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [84.67s] train_loss=0.8068 val_loss=0.4509 *
+  Epoch 2/100: 100%|██████████| 25/25 [84.64s] train_loss=0.0115 val_loss=0.3098
+  Epoch 3/100: 100%|██████████| 25/25 [84.66s] train_loss=0.0026 val_loss=0.2983
+  Epoch 4/100: 100%|██████████| 25/25 [84.67s] train_loss=0.0017 val_loss=0.2929
+  Epoch 5/100: 100%|██████████| 25/25 [84.67s] train_loss=0.0014 val_loss=0.2961
+  Epoch 6/100: 100%|██████████| 25/25 [84.70s] train_loss=0.0011 val_loss=0.2798
+  Early stopping at epoch 6 (patience=5)
+Fold 4 Result: F1=0.9259, Acc=0.9178
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.9323 +/- 0.0468
+Accuracy: 0.9323 +/- 0.0438
+
+Results saved to: results/benchmark/featstat_norot_ward/20260722_234641_featstat_norot_fewshot/fewshot/ward_ratio0.02/finetune/20260723_005610_featstat_norot/results.json

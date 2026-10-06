@@ -1,0 +1,68 @@
+Using device: cuda:0
+Model: featinv_norot (Feature-regression (invariant), no rotation aug)
+Weights: pretrained/featinv_norot.pth
+Loading dataset: exoskeletons
+Sensors: ['Chest', 'RightLeg', 'LeftLeg', 'RightWrist', 'LeftWrist']
+Data shape: X=(5678, 15, 150), Y=(5678,), U=(5678,)
+Classes: 4, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.35s] train_loss=0.2173 val_loss=0.0313 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.92s] train_loss=0.0010 val_loss=0.0337
+  Epoch 3/100: 100%|██████████| 25/25 [1.91s] train_loss=0.0004 val_loss=0.0366
+  Epoch 4/100: 100%|██████████| 25/25 [1.91s] train_loss=0.0002 val_loss=0.0378
+  Epoch 5/100: 100%|██████████| 25/25 [1.91s] train_loss=0.0002 val_loss=0.0362
+  Epoch 6/100: 100%|██████████| 25/25 [1.91s] train_loss=0.0002 val_loss=0.0391
+  Early stopping at epoch 6 (patience=5)
+Fold 1 Result: F1=0.9845, Acc=0.9922
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.91s] train_loss=0.2175 val_loss=0.0410 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.90s] train_loss=0.0008 val_loss=0.0303 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.90s] train_loss=0.0003 val_loss=0.0325
+  Epoch 4/100: 100%|██████████| 25/25 [1.89s] train_loss=0.0003 val_loss=0.0331
+  Epoch 5/100: 100%|██████████| 25/25 [1.90s] train_loss=0.0002 val_loss=0.0344
+  Epoch 6/100: 100%|██████████| 25/25 [1.89s] train_loss=0.0002 val_loss=0.0365
+  Epoch 7/100: 100%|██████████| 25/25 [1.90s] train_loss=0.0002 val_loss=0.0334
+  Early stopping at epoch 7 (patience=5)
+Fold 2 Result: F1=0.9699, Acc=0.9858
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.93s] train_loss=0.2136 val_loss=0.0267 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.91s] train_loss=0.0009 val_loss=0.0267 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.92s] train_loss=0.0005 val_loss=0.0251
+  Epoch 4/100: 100%|██████████| 25/25 [1.91s] train_loss=0.0004 val_loss=0.0260 *
+  Epoch 5/100: 100%|██████████| 25/25 [1.92s] train_loss=0.0003 val_loss=0.0291
+  Epoch 6/100: 100%|██████████| 25/25 [1.91s] train_loss=0.0002 val_loss=0.0265
+  Epoch 7/100: 100%|██████████| 25/25 [1.91s] train_loss=0.0002 val_loss=0.0272
+  Epoch 8/100: 100%|██████████| 25/25 [1.91s] train_loss=0.0001 val_loss=0.0307
+  Epoch 9/100: 100%|██████████| 25/25 [1.92s] train_loss=0.0001 val_loss=0.0275
+  Early stopping at epoch 9 (patience=5)
+Fold 3 Result: F1=0.9845, Acc=0.9919
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.98s] train_loss=0.2008 val_loss=0.0379 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.90s] train_loss=0.0007 val_loss=0.0485 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.91s] train_loss=0.0003 val_loss=0.0495
+  Epoch 4/100: 100%|██████████| 25/25 [1.90s] train_loss=0.0002 val_loss=0.0503
+  Epoch 5/100: 100%|██████████| 25/25 [1.90s] train_loss=0.0002 val_loss=0.0485
+  Epoch 6/100: 100%|██████████| 25/25 [1.91s] train_loss=0.0001 val_loss=0.0494
+  Epoch 7/100: 100%|██████████| 25/25 [1.92s] train_loss=0.0001 val_loss=0.0513
+  Early stopping at epoch 7 (patience=5)
+Fold 4 Result: F1=0.9590, Acc=0.9870
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.9745 +/- 0.0107
+Accuracy: 0.9892 +/- 0.0028
+
+Results saved to: results/benchmark/featinv_norot_exoskeletons/20260723_043944_featinv_norot_fewshot/fewshot/exoskeletons_ratio0.1/finetune/20260723_044405_featinv_norot/results.json

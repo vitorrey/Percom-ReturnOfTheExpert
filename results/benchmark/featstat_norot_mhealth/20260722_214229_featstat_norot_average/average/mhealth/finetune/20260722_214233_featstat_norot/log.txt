@@ -1,0 +1,69 @@
+Using device: cuda:0
+Model: featstat_norot (Feature-regression (statistical), no rotation aug)
+Weights: pretrained/featstat_norot.pth
+Loading dataset: mhealth
+Sensors: ['Chest', 'LeftAnkle', 'RightWrist']
+Data shape: X=(2117, 9, 150), Y=(2117,), U=(2117,)
+Classes: 12, Sensors: 3
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 10/10 [0.90s] train_loss=1.5932 val_loss=1.0822 *
+  Epoch 2/100: 100%|██████████| 10/10 [0.48s] train_loss=0.4026 val_loss=0.4692
+  Epoch 3/100: 100%|██████████| 10/10 [0.47s] train_loss=0.0857 val_loss=0.4282
+  Epoch 4/100: 100%|██████████| 10/10 [0.48s] train_loss=0.0288 val_loss=0.4797 *
+  Epoch 5/100: 100%|██████████| 10/10 [0.48s] train_loss=0.0137 val_loss=0.4541
+  Epoch 6/100: 100%|██████████| 10/10 [0.55s] train_loss=0.0095 val_loss=0.4004
+  Epoch 7/100: 100%|██████████| 10/10 [0.47s] train_loss=0.0070 val_loss=0.4252
+  Epoch 8/100: 100%|██████████| 10/10 [0.47s] train_loss=0.0078 val_loss=0.5422
+  Epoch 9/100: 100%|██████████| 10/10 [0.47s] train_loss=0.0052 val_loss=0.4641
+  Early stopping at epoch 9 (patience=5)
+Fold 1 Result: F1=0.9111, Acc=0.9132
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 10/10 [0.53s] train_loss=1.5964 val_loss=1.0180 *
+  Epoch 2/100: 100%|██████████| 10/10 [0.48s] train_loss=0.4717 val_loss=0.2544 *
+  Epoch 3/100: 100%|██████████| 10/10 [0.48s] train_loss=0.1228 val_loss=0.2341
+  Epoch 4/100: 100%|██████████| 10/10 [0.48s] train_loss=0.0539 val_loss=0.0724
+  Epoch 5/100: 100%|██████████| 10/10 [0.48s] train_loss=0.0209 val_loss=0.0403
+  Epoch 6/100: 100%|██████████| 10/10 [0.49s] train_loss=0.0121 val_loss=0.1069
+  Epoch 7/100: 100%|██████████| 10/10 [0.48s] train_loss=0.0075 val_loss=0.0901
+  Early stopping at epoch 7 (patience=5)
+Fold 2 Result: F1=0.9309, Acc=0.9317
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 11/11 [0.59s] train_loss=1.5822 val_loss=0.8875 *
+  Epoch 2/100: 100%|██████████| 11/11 [0.52s] train_loss=0.4040 val_loss=0.1944 *
+  Epoch 3/100: 100%|██████████| 11/11 [0.52s] train_loss=0.0935 val_loss=0.0916
+  Epoch 4/100: 100%|██████████| 11/11 [0.53s] train_loss=0.0447 val_loss=0.1231
+  Epoch 5/100: 100%|██████████| 11/11 [0.52s] train_loss=0.0241 val_loss=0.0318
+  Epoch 6/100: 100%|██████████| 11/11 [0.52s] train_loss=0.0414 val_loss=0.0695
+  Epoch 7/100: 100%|██████████| 11/11 [0.52s] train_loss=0.0173 val_loss=0.0671
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.9618, Acc=0.9584
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 10/10 [0.48s] train_loss=1.5533 val_loss=1.1267 *
+  Epoch 2/100: 100%|██████████| 10/10 [0.48s] train_loss=0.4055 val_loss=0.3126 *
+  Epoch 3/100: 100%|██████████| 10/10 [0.48s] train_loss=0.0841 val_loss=0.2682
+  Epoch 4/100: 100%|██████████| 10/10 [0.48s] train_loss=0.0421 val_loss=0.2298
+  Epoch 5/100: 100%|██████████| 10/10 [0.48s] train_loss=0.0242 val_loss=0.3156
+  Epoch 6/100: 100%|██████████| 10/10 [0.48s] train_loss=0.0139 val_loss=0.3796
+  Epoch 7/100: 100%|██████████| 10/10 [0.48s] train_loss=0.0121 val_loss=0.2568
+  Early stopping at epoch 7 (patience=5)
+Fold 4 Result: F1=0.9977, Acc=0.9976
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.9504 +/- 0.0327
+Accuracy: 0.9502 +/- 0.0317
+
+Results saved to: results/benchmark/featstat_norot_mhealth/20260722_214229_featstat_norot_average/average/mhealth/finetune/20260722_214233_featstat_norot/results.json

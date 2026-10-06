@@ -1,0 +1,60 @@
+{
+  "mode": "finetune",
+  "model": "featgoogle",
+  "model_type": "resnet",
+  "dataset": "ward",
+  "sensors": [
+    "LeftArm",
+    "RightArm",
+    "Waist",
+    "LeftAnkle",
+    "RightAnkle"
+  ],
+  "weights": "pretrained/featgoogle.pth",
+  "seed": 42,
+  "n_classes": 13,
+  "num_sensors": 5,
+  "hyperparameters": {
+    "epochs": 100,
+    "batch_size": 128,
+    "learning_rate": 0.0001,
+    "patience": 5,
+    "weight_decay": 1e-05,
+    "scheduler": "CosineAnnealingLR",
+    "optimizer": "Adam",
+    "data_ratio": 0.1
+  },
+  "fold_results": [
+    {
+      "test_f1": 0.8618797295931822,
+      "test_acc": 0.8643457382953181,
+      "test_loss": 0.39969414858972613,
+      "best_val_f1": 0.9624646077668443
+    },
+    {
+      "test_f1": 0.9774021759145322,
+      "test_acc": 0.9774774774774775,
+      "test_loss": 0.05704714972022418,
+      "best_val_f1": 0.9802894771196983
+    },
+    {
+      "test_f1": 0.98093441875581,
+      "test_acc": 0.9786381842456608,
+      "test_loss": 0.06662385549659881,
+      "best_val_f1": 0.9282668888586714
+    },
+    {
+      "test_f1": 0.9122180112358755,
+      "test_acc": 0.8935912938331319,
+      "test_loss": 0.3526714080009956,
+      "best_val_f1": 0.899169599235001
+    }
+  ],
+  "summary": {
+    "mean_f1": 0.93310858387485,
+    "std_f1": 0.04939432782542441,
+    "mean_acc": 0.9285131734628971,
+    "std_acc": 0.05061377575933675
+  },
+  "timestamp": "20260718_150122"
+}

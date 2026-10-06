@@ -1,0 +1,56 @@
+{
+  "mode": "finetune",
+  "model": "featinv",
+  "model_type": "resnet",
+  "dataset": "uschad",
+  "sensors": [
+    "Phone"
+  ],
+  "weights": "pretrained/featinv.pth",
+  "seed": 42,
+  "n_classes": 12,
+  "num_sensors": 1,
+  "hyperparameters": {
+    "epochs": 100,
+    "batch_size": 128,
+    "learning_rate": 0.0001,
+    "patience": 5,
+    "weight_decay": 1e-05,
+    "scheduler": "CosineAnnealingLR",
+    "optimizer": "Adam",
+    "data_ratio": 1.0
+  },
+  "fold_results": [
+    {
+      "test_f1": 0.7001264888587753,
+      "test_acc": 0.7739602169981917,
+      "test_loss": 0.8447131049999492,
+      "best_val_f1": 0.787127585228816
+    },
+    {
+      "test_f1": 0.753143372336906,
+      "test_acc": 0.7823529411764706,
+      "test_loss": 0.6243460594380603,
+      "best_val_f1": 0.7438449122641337
+    },
+    {
+      "test_f1": 0.7913292968290171,
+      "test_acc": 0.7710706150341685,
+      "test_loss": 0.8815049161595676,
+      "best_val_f1": 0.781398213790729
+    },
+    {
+      "test_f1": 0.7219645360566805,
+      "test_acc": 0.7541789577187807,
+      "test_loss": 0.8751557598306249,
+      "best_val_f1": 0.7504225898624312
+    }
+  ],
+  "summary": {
+    "mean_f1": 0.7416409235203447,
+    "std_f1": 0.034321455679099465,
+    "mean_acc": 0.7703906827319029,
+    "std_acc": 0.010236204592152258
+  },
+  "timestamp": "20260716_185602"
+}

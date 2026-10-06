@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: featgoogle_norot (Feature-regression (industry), no rotation aug)
+Weights: pretrained/featgoogle_norot.pth
+Loading dataset: dsads
+Sensors: ['Torso', 'RightArm', 'LeftArm', 'RightLeg', 'LeftLeg']
+Data shape: X=(8842, 15, 150), Y=(8842,), U=(8842,)
+Classes: 19, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.87s] train_loss=1.2295 val_loss=0.5649 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.07s] train_loss=0.1080 val_loss=0.4962
+  Epoch 3/100: 100%|██████████| 25/25 [2.07s] train_loss=0.0455 val_loss=0.4986
+  Epoch 4/100: 100%|██████████| 25/25 [2.06s] train_loss=0.0303 val_loss=0.5126
+  Epoch 5/100: 100%|██████████| 25/25 [2.07s] train_loss=0.0213 val_loss=0.4967
+  Epoch 6/100: 100%|██████████| 25/25 [2.06s] train_loss=0.0311 val_loss=0.4991
+  Early stopping at epoch 6 (patience=5)
+Fold 1 Result: F1=0.8331, Acc=0.8583
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.07s] train_loss=1.1868 val_loss=0.5399 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.04s] train_loss=0.0791 val_loss=0.4799 *
+  Epoch 3/100: 100%|██████████| 25/25 [2.05s] train_loss=0.0318 val_loss=0.4757 *
+  Epoch 4/100: 100%|██████████| 25/25 [2.04s] train_loss=0.0144 val_loss=0.5334 *
+  Epoch 5/100: 100%|██████████| 25/25 [2.04s] train_loss=0.0119 val_loss=0.6249
+  Epoch 6/100: 100%|██████████| 25/25 [2.05s] train_loss=0.0103 val_loss=0.5060 *
+  Epoch 7/100: 100%|██████████| 25/25 [2.04s] train_loss=0.0146 val_loss=0.3355 *
+  Epoch 8/100: 100%|██████████| 25/25 [2.04s] train_loss=0.0126 val_loss=0.6716
+  Epoch 9/100: 100%|██████████| 25/25 [2.05s] train_loss=0.0099 val_loss=0.5763
+  Epoch 10/100: 100%|██████████| 25/25 [2.05s] train_loss=0.0063 val_loss=0.7633
+  Epoch 11/100: 100%|██████████| 25/25 [2.05s] train_loss=0.0039 val_loss=0.7581
+  Epoch 12/100: 100%|██████████| 25/25 [2.05s] train_loss=0.0017 val_loss=0.7208
+  Early stopping at epoch 12 (patience=5)
+Fold 2 Result: F1=0.9104, Acc=0.9136
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.08s] train_loss=1.2180 val_loss=0.5359 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.07s] train_loss=0.0939 val_loss=0.2690 *
+  Epoch 3/100: 100%|██████████| 25/25 [2.07s] train_loss=0.0595 val_loss=0.3030
+  Epoch 4/100: 100%|██████████| 25/25 [2.07s] train_loss=0.0338 val_loss=0.3724
+  Epoch 5/100: 100%|██████████| 25/25 [2.07s] train_loss=0.0213 val_loss=0.2624
+  Epoch 6/100: 100%|██████████| 25/25 [2.07s] train_loss=0.0073 val_loss=0.2548
+  Epoch 7/100: 100%|██████████| 25/25 [2.15s] train_loss=0.0032 val_loss=0.3315
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.9029, Acc=0.9025
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.06s] train_loss=1.1753 val_loss=0.4918 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.06s] train_loss=0.0950 val_loss=0.3693
+  Epoch 3/100: 100%|██████████| 25/25 [2.05s] train_loss=0.0410 val_loss=0.3283
+  Epoch 4/100: 100%|██████████| 25/25 [2.05s] train_loss=0.0193 val_loss=0.3575
+  Epoch 5/100: 100%|██████████| 25/25 [2.05s] train_loss=0.0173 val_loss=0.3954
+  Epoch 6/100: 100%|██████████| 25/25 [2.06s] train_loss=0.0149 val_loss=0.4404
+  Early stopping at epoch 6 (patience=5)
+Fold 4 Result: F1=0.8679, Acc=0.8741
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.8786 +/- 0.0307
+Accuracy: 0.8871 +/- 0.0220
+
+Results saved to: results/benchmark/featgoogle_norot_dsads/20260722_222149_featgoogle_norot_fewshot/fewshot/dsads_ratio0.2/finetune/20260722_222822_featgoogle_norot/results.json

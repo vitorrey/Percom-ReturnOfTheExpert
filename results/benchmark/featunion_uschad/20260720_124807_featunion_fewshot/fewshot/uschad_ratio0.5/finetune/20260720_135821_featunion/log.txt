@@ -1,0 +1,93 @@
+Using device: cuda:0
+Model: featunion (Feature-regression pretrain: union of all three banks (deduped))
+Weights: pretrained/featunion.pth
+Loading dataset: uschad
+Sensors: ['Phone']
+Data shape: X=(8523, 3, 150), Y=(8523,), U=(8523,)
+Classes: 12, Sensors: 1
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [17.32s] train_loss=1.5906 val_loss=0.8760 *
+  Epoch 2/100: 100%|██████████| 25/25 [17.02s] train_loss=0.7077 val_loss=0.7458
+  Epoch 3/100: 100%|██████████| 25/25 [17.02s] train_loss=0.3938 val_loss=0.6051 *
+  Epoch 4/100: 100%|██████████| 25/25 [17.01s] train_loss=0.2915 val_loss=0.5132 *
+  Epoch 5/100: 100%|██████████| 25/25 [17.00s] train_loss=0.2354 val_loss=0.5135
+  Epoch 6/100: 100%|██████████| 25/25 [17.01s] train_loss=0.2263 val_loss=0.4279 *
+  Epoch 7/100: 100%|██████████| 25/25 [17.00s] train_loss=0.2165 val_loss=0.5541
+  Epoch 8/100: 100%|██████████| 25/25 [17.01s] train_loss=0.2294 val_loss=0.8272
+  Epoch 9/100: 100%|██████████| 25/25 [17.01s] train_loss=0.1913 val_loss=0.6909
+  Epoch 10/100: 100%|██████████| 25/25 [17.02s] train_loss=0.1893 val_loss=0.7145
+  Epoch 11/100: 100%|██████████| 25/25 [16.99s] train_loss=0.1598 val_loss=0.4615
+  Early stopping at epoch 11 (patience=5)
+Fold 1 Result: F1=0.7134, Acc=0.7993
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [17.02s] train_loss=1.6637 val_loss=1.1651 *
+  Epoch 2/100: 100%|██████████| 25/25 [17.01s] train_loss=0.6702 val_loss=0.9575 *
+  Epoch 3/100: 100%|██████████| 25/25 [17.03s] train_loss=0.3577 val_loss=0.8627 *
+  Epoch 4/100: 100%|██████████| 25/25 [17.01s] train_loss=0.3015 val_loss=0.9680
+  Epoch 5/100: 100%|██████████| 25/25 [17.01s] train_loss=0.2844 val_loss=1.3977
+  Epoch 6/100: 100%|██████████| 25/25 [17.00s] train_loss=0.2528 val_loss=1.3241
+  Epoch 7/100: 100%|██████████| 25/25 [17.01s] train_loss=0.2185 val_loss=0.9294 *
+  Epoch 8/100: 100%|██████████| 25/25 [17.01s] train_loss=0.1986 val_loss=1.1383
+  Epoch 9/100: 100%|██████████| 25/25 [17.01s] train_loss=0.1876 val_loss=1.2246
+  Epoch 10/100: 100%|██████████| 25/25 [17.00s] train_loss=0.1876 val_loss=1.2955
+  Epoch 11/100: 100%|██████████| 25/25 [16.98s] train_loss=0.1473 val_loss=1.1552 *
+  Epoch 12/100: 100%|██████████| 25/25 [16.99s] train_loss=0.1223 val_loss=1.3135
+  Epoch 13/100: 100%|██████████| 25/25 [16.99s] train_loss=0.1170 val_loss=1.0304 *
+  Epoch 14/100: 100%|██████████| 25/25 [16.99s] train_loss=0.0772 val_loss=1.4098 *
+  Epoch 15/100: 100%|██████████| 25/25 [17.01s] train_loss=0.0957 val_loss=1.4694
+  Epoch 16/100: 100%|██████████| 25/25 [17.01s] train_loss=0.0912 val_loss=1.0115
+  Epoch 17/100: 100%|██████████| 25/25 [17.01s] train_loss=0.0541 val_loss=1.3803
+  Epoch 18/100: 100%|██████████| 25/25 [17.01s] train_loss=0.0429 val_loss=1.2144
+  Epoch 19/100: 100%|██████████| 25/25 [17.03s] train_loss=0.0440 val_loss=1.3692
+  Early stopping at epoch 19 (patience=5)
+Fold 2 Result: F1=0.7605, Acc=0.7906
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [17.03s] train_loss=1.6235 val_loss=1.2158 *
+  Epoch 2/100: 100%|██████████| 25/25 [17.02s] train_loss=0.6760 val_loss=0.6490 *
+  Epoch 3/100: 100%|██████████| 25/25 [17.01s] train_loss=0.3648 val_loss=0.5507 *
+  Epoch 4/100: 100%|██████████| 25/25 [17.03s] train_loss=0.3120 val_loss=0.5391 *
+  Epoch 5/100: 100%|██████████| 25/25 [17.02s] train_loss=0.2702 val_loss=0.5982
+  Epoch 6/100: 100%|██████████| 25/25 [17.02s] train_loss=0.2369 val_loss=0.4741
+  Epoch 7/100: 100%|██████████| 25/25 [17.02s] train_loss=0.2030 val_loss=0.5829
+  Epoch 8/100: 100%|██████████| 25/25 [17.03s] train_loss=0.1669 val_loss=0.4770 *
+  Epoch 9/100: 100%|██████████| 25/25 [17.03s] train_loss=0.1758 val_loss=0.5769
+  Epoch 10/100: 100%|██████████| 25/25 [17.03s] train_loss=0.1462 val_loss=0.6242
+  Epoch 11/100: 100%|██████████| 25/25 [17.02s] train_loss=0.1254 val_loss=0.4349 *
+  Epoch 12/100: 100%|██████████| 25/25 [17.02s] train_loss=0.0866 val_loss=0.6593
+  Epoch 13/100: 100%|██████████| 25/25 [17.02s] train_loss=0.0738 val_loss=0.6325
+  Epoch 14/100: 100%|██████████| 25/25 [17.02s] train_loss=0.0986 val_loss=0.7213
+  Epoch 15/100: 100%|██████████| 25/25 [17.02s] train_loss=0.0713 val_loss=1.1303
+  Epoch 16/100: 100%|██████████| 25/25 [17.02s] train_loss=0.0672 val_loss=0.5096
+  Early stopping at epoch 16 (patience=5)
+Fold 3 Result: F1=0.6610, Acc=0.6788
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [17.03s] train_loss=1.6321 val_loss=1.0906 *
+  Epoch 2/100: 100%|██████████| 25/25 [17.03s] train_loss=0.7535 val_loss=0.7050 *
+  Epoch 3/100: 100%|██████████| 25/25 [17.03s] train_loss=0.4195 val_loss=0.6783 *
+  Epoch 4/100: 100%|██████████| 25/25 [17.04s] train_loss=0.3317 val_loss=0.6539
+  Epoch 5/100: 100%|██████████| 25/25 [17.03s] train_loss=0.2827 val_loss=0.8626
+  Epoch 6/100: 100%|██████████| 25/25 [17.03s] train_loss=0.2731 val_loss=0.7543
+  Epoch 7/100: 100%|██████████| 25/25 [17.02s] train_loss=0.2701 val_loss=0.9321
+  Epoch 8/100: 100%|██████████| 25/25 [17.04s] train_loss=0.2378 val_loss=0.7393
+  Early stopping at epoch 8 (patience=5)
+Fold 4 Result: F1=0.7211, Acc=0.8053
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.7140 +/- 0.0355
+Accuracy: 0.7685 +/- 0.0520
+
+Results saved to: results/benchmark/featunion_uschad/20260720_124807_featunion_fewshot/fewshot/uschad_ratio0.5/finetune/20260720_135821_featunion/results.json

@@ -1,0 +1,80 @@
+Using device: cuda:0
+Model: featgoogle (Feature-regression pretrain: industry motion feature bank)
+Weights: pretrained/featgoogle.pth
+Loading dataset: vtt_coniot
+Sensors: ['Hip', 'Back', 'UpperArm']
+Data shape: X=(3933, 9, 150), Y=(3933,), U=(3933,)
+Classes: 16, Sensors: 3
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 22/22 [43.32s] train_loss=1.2806 val_loss=2.4314 *
+  Epoch 2/100: 100%|██████████| 22/22 [43.11s] train_loss=0.0982 val_loss=2.6349
+  Epoch 3/100: 100%|██████████| 22/22 [43.04s] train_loss=0.0179 val_loss=2.6611
+  Epoch 4/100: 100%|██████████| 22/22 [43.11s] train_loss=0.0091 val_loss=2.7472
+  Epoch 5/100: 100%|██████████| 22/22 [43.05s] train_loss=0.0058 val_loss=2.7413
+  Epoch 6/100: 100%|██████████| 22/22 [43.03s] train_loss=0.0046 val_loss=2.7954
+  Early stopping at epoch 6 (patience=5)
+Fold 1 Result: F1=0.2101, Acc=0.3092
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 22/22 [43.11s] train_loss=1.2746 val_loss=2.1967 *
+  Epoch 2/100: 100%|██████████| 22/22 [43.02s] train_loss=0.0845 val_loss=2.2215
+  Epoch 3/100: 100%|██████████| 22/22 [43.06s] train_loss=0.0140 val_loss=2.2941 *
+  Epoch 4/100: 100%|██████████| 22/22 [43.08s] train_loss=0.0076 val_loss=2.3816
+  Epoch 5/100: 100%|██████████| 22/22 [43.13s] train_loss=0.0052 val_loss=2.2988
+  Epoch 6/100: 100%|██████████| 22/22 [43.12s] train_loss=0.0039 val_loss=2.3932
+  Epoch 7/100: 100%|██████████| 22/22 [43.08s] train_loss=0.0032 val_loss=2.4270 *
+  Epoch 8/100: 100%|██████████| 22/22 [43.09s] train_loss=0.0026 val_loss=2.3857
+  Epoch 9/100: 100%|██████████| 22/22 [43.05s] train_loss=0.0023 val_loss=2.4533
+  Epoch 10/100: 100%|██████████| 22/22 [43.05s] train_loss=0.0018 val_loss=2.4732
+  Epoch 11/100: 100%|██████████| 22/22 [43.08s] train_loss=0.0015 val_loss=2.5540
+  Epoch 12/100: 100%|██████████| 22/22 [43.07s] train_loss=0.0013 val_loss=2.5153
+  Early stopping at epoch 12 (patience=5)
+Fold 2 Result: F1=0.2081, Acc=0.2648
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 22/22 [43.02s] train_loss=1.3565 val_loss=2.1215 *
+  Epoch 2/100: 100%|██████████| 22/22 [43.11s] train_loss=0.1112 val_loss=2.0486
+  Epoch 3/100: 100%|██████████| 22/22 [43.09s] train_loss=0.0169 val_loss=2.0308
+  Epoch 4/100: 100%|██████████| 22/22 [43.03s] train_loss=0.0083 val_loss=2.0677
+  Epoch 5/100: 100%|██████████| 22/22 [43.06s] train_loss=0.0058 val_loss=2.0873
+  Epoch 6/100: 100%|██████████| 22/22 [43.08s] train_loss=0.0041 val_loss=2.0885 *
+  Epoch 7/100: 100%|██████████| 22/22 [43.05s] train_loss=0.0034 val_loss=2.0987
+  Epoch 8/100: 100%|██████████| 22/22 [43.10s] train_loss=0.0027 val_loss=2.0687
+  Epoch 9/100: 100%|██████████| 22/22 [43.06s] train_loss=0.0022 val_loss=2.1046
+  Epoch 10/100: 100%|██████████| 22/22 [43.04s] train_loss=0.0019 val_loss=2.0949
+  Epoch 11/100: 100%|██████████| 22/22 [43.08s] train_loss=0.0017 val_loss=2.1346
+  Early stopping at epoch 11 (patience=5)
+Fold 3 Result: F1=0.2509, Acc=0.3396
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 22/22 [43.05s] train_loss=1.2807 val_loss=2.1257 *
+  Epoch 2/100: 100%|██████████| 22/22 [42.99s] train_loss=0.0994 val_loss=2.1938 *
+  Epoch 3/100: 100%|██████████| 22/22 [42.98s] train_loss=0.0178 val_loss=2.1610 *
+  Epoch 4/100: 100%|██████████| 22/22 [42.96s] train_loss=0.0084 val_loss=2.2161
+  Epoch 5/100: 100%|██████████| 22/22 [42.98s] train_loss=0.0060 val_loss=2.2643
+  Epoch 6/100: 100%|██████████| 22/22 [42.99s] train_loss=0.0045 val_loss=2.2934
+  Epoch 7/100: 100%|██████████| 22/22 [42.98s] train_loss=0.0036 val_loss=2.2471 *
+  Epoch 8/100: 100%|██████████| 22/22 [42.97s] train_loss=0.0031 val_loss=2.3372
+  Epoch 9/100: 100%|██████████| 22/22 [42.99s] train_loss=0.0026 val_loss=2.3068
+  Epoch 10/100: 100%|██████████| 22/22 [42.96s] train_loss=0.0021 val_loss=2.3302
+  Epoch 11/100: 100%|██████████| 22/22 [42.96s] train_loss=0.0018 val_loss=2.3833
+  Epoch 12/100: 100%|██████████| 22/22 [42.95s] train_loss=0.0015 val_loss=2.4119
+  Early stopping at epoch 12 (patience=5)
+Fold 4 Result: F1=0.3237, Acc=0.4030
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.2482 +/- 0.0468
+Accuracy: 0.3291 +/- 0.0502
+
+Results saved to: results/benchmark/featgoogle_vtt_coniot/20260718_113237_featgoogle_fewshot/fewshot/vtt_coniot_ratio0.01/finetune/20260718_113239_featgoogle/results.json

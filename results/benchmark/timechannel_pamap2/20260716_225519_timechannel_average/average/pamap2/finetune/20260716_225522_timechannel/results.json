@@ -1,0 +1,58 @@
+{
+  "mode": "finetune",
+  "model": "timechannel",
+  "model_type": "maskedresnet",
+  "dataset": "pamap2",
+  "sensors": [
+    "hand",
+    "chest",
+    "ankle"
+  ],
+  "weights": "pretrained/timechannel.pth",
+  "seed": 42,
+  "n_classes": 12,
+  "num_sensors": 3,
+  "hyperparameters": {
+    "epochs": 100,
+    "batch_size": 128,
+    "learning_rate": 0.0001,
+    "patience": 5,
+    "weight_decay": 1e-05,
+    "scheduler": "CosineAnnealingLR",
+    "optimizer": "Adam",
+    "data_ratio": 1.0
+  },
+  "fold_results": [
+    {
+      "test_f1": 0.8560598800342173,
+      "test_acc": 0.8571428571428571,
+      "test_loss": 0.591915114339825,
+      "best_val_f1": 0.9082557116016229
+    },
+    {
+      "test_f1": 0.8086364393819596,
+      "test_acc": 0.8710907704042715,
+      "test_loss": 0.435089381083471,
+      "best_val_f1": 0.8661919961040582
+    },
+    {
+      "test_f1": 0.8971178921130624,
+      "test_acc": 0.890661938534279,
+      "test_loss": 0.38305971308239245,
+      "best_val_f1": 0.7762862419220743
+    },
+    {
+      "test_f1": 0.7438560342839002,
+      "test_acc": 0.7908863920099876,
+      "test_loss": 0.786192983128456,
+      "best_val_f1": 0.8946137458882757
+    }
+  ],
+  "summary": {
+    "mean_f1": 0.8264175614532848,
+    "std_f1": 0.057030206638481885,
+    "mean_acc": 0.8524454895228488,
+    "std_acc": 0.03748243329663195
+  },
+  "timestamp": "20260716_225522"
+}

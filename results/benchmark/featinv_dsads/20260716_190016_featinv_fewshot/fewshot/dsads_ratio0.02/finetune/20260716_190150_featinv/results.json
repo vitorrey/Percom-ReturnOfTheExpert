@@ -1,0 +1,60 @@
+{
+  "mode": "finetune",
+  "model": "featinv",
+  "model_type": "resnet",
+  "dataset": "dsads",
+  "sensors": [
+    "Torso",
+    "RightArm",
+    "LeftArm",
+    "RightLeg",
+    "LeftLeg"
+  ],
+  "weights": "pretrained/featinv.pth",
+  "seed": 42,
+  "n_classes": 19,
+  "num_sensors": 5,
+  "hyperparameters": {
+    "epochs": 100,
+    "batch_size": 128,
+    "learning_rate": 0.0001,
+    "patience": 5,
+    "weight_decay": 1e-05,
+    "scheduler": "CosineAnnealingLR",
+    "optimizer": "Adam",
+    "data_ratio": 0.02
+  },
+  "fold_results": [
+    {
+      "test_f1": 0.8644753902750171,
+      "test_acc": 0.8759259259259259,
+      "test_loss": 0.4260120681590504,
+      "best_val_f1": 0.8061338697647451
+    },
+    {
+      "test_f1": 0.7646334569033698,
+      "test_acc": 0.7969298245614035,
+      "test_loss": 0.6781297819525526,
+      "best_val_f1": 0.7673716990907918
+    },
+    {
+      "test_f1": 0.7511307375578967,
+      "test_acc": 0.763430725730443,
+      "test_loss": 0.6260359742442579,
+      "best_val_f1": 0.8193853693232312
+    },
+    {
+      "test_f1": 0.8069462139632876,
+      "test_acc": 0.8258771929824561,
+      "test_loss": 0.6447419246560648,
+      "best_val_f1": 0.8056622791166248
+    }
+  ],
+  "summary": {
+    "mean_f1": 0.7967964496748928,
+    "std_f1": 0.044168065621664164,
+    "mean_acc": 0.8155409173000571,
+    "std_acc": 0.04127660566252222
+  },
+  "timestamp": "20260716_190150"
+}

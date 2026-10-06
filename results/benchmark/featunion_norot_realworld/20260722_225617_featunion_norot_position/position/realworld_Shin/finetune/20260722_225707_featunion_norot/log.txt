@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: featunion_norot (Feature-regression (union), no rotation aug)
+Weights: pretrained/featunion_norot.pth
+Loading dataset: realworld
+Sensors: ['Shin']
+Data shape: X=(21216, 3, 150), Y=(21216,), U=(21216,)
+Classes: 8, Sensors: 1
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.17s] train_loss=1.0965 val_loss=0.6607 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.50s] train_loss=0.4162 val_loss=0.6152
+  Epoch 3/100: 100%|██████████| 25/25 [0.49s] train_loss=0.2950 val_loss=0.5125 *
+  Epoch 4/100: 100%|██████████| 25/25 [0.49s] train_loss=0.2307 val_loss=0.5285
+  Epoch 5/100: 100%|██████████| 25/25 [0.49s] train_loss=0.2432 val_loss=0.5566
+  Epoch 6/100: 100%|██████████| 25/25 [0.49s] train_loss=0.2219 val_loss=0.4330
+  Epoch 7/100: 100%|██████████| 25/25 [0.50s] train_loss=0.1928 val_loss=0.5280
+  Epoch 8/100: 100%|██████████| 25/25 [0.49s] train_loss=0.1868 val_loss=0.4866
+  Early stopping at epoch 8 (patience=5)
+Fold 1 Result: F1=0.7185, Acc=0.7012
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.52s] train_loss=1.1490 val_loss=0.6662 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.51s] train_loss=0.4217 val_loss=0.5468
+  Epoch 3/100: 100%|██████████| 25/25 [0.51s] train_loss=0.3018 val_loss=0.6386
+  Epoch 4/100: 100%|██████████| 25/25 [0.51s] train_loss=0.2377 val_loss=0.7515
+  Epoch 5/100: 100%|██████████| 25/25 [0.51s] train_loss=0.2139 val_loss=0.6977
+  Epoch 6/100: 100%|██████████| 25/25 [0.51s] train_loss=0.2287 val_loss=0.7511
+  Early stopping at epoch 6 (patience=5)
+Fold 2 Result: F1=0.8296, Acc=0.7946
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.51s] train_loss=1.1613 val_loss=0.6798 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.50s] train_loss=0.4292 val_loss=0.6165
+  Epoch 3/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2922 val_loss=0.6946
+  Epoch 4/100: 100%|██████████| 25/25 [0.49s] train_loss=0.2564 val_loss=0.8057
+  Epoch 5/100: 100%|██████████| 25/25 [0.49s] train_loss=0.2147 val_loss=0.8760
+  Epoch 6/100: 100%|██████████| 25/25 [0.49s] train_loss=0.2257 val_loss=0.8193
+  Early stopping at epoch 6 (patience=5)
+Fold 3 Result: F1=0.8128, Acc=0.8070
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.50s] train_loss=1.1728 val_loss=0.7195 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.50s] train_loss=0.4214 val_loss=0.6800
+  Epoch 3/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2921 val_loss=0.7691
+  Epoch 4/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2405 val_loss=0.7956
+  Epoch 5/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2188 val_loss=0.8911
+  Epoch 6/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2284 val_loss=0.6325 *
+  Epoch 7/100: 100%|██████████| 25/25 [0.50s] train_loss=0.1977 val_loss=0.7533
+  Epoch 8/100: 100%|██████████| 25/25 [0.50s] train_loss=0.1989 val_loss=0.7964
+  Epoch 9/100: 100%|██████████| 25/25 [0.50s] train_loss=0.1811 val_loss=0.7405
+  Epoch 10/100: 100%|██████████| 25/25 [0.50s] train_loss=0.1981 val_loss=0.8726
+  Epoch 11/100: 100%|██████████| 25/25 [0.50s] train_loss=0.1945 val_loss=0.8669
+  Early stopping at epoch 11 (patience=5)
+Fold 4 Result: F1=0.8874, Acc=0.8807
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.8121 +/- 0.0607
+Accuracy: 0.7959 +/- 0.0638
+
+Results saved to: results/benchmark/featunion_norot_realworld/20260722_225617_featunion_norot_position/position/realworld_Shin/finetune/20260722_225707_featunion_norot/results.json

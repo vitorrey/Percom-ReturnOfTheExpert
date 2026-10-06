@@ -1,0 +1,58 @@
+{
+  "mode": "finetune",
+  "model": "featgoogle_norot",
+  "model_type": "resnet",
+  "dataset": "imwsha",
+  "sensors": [
+    "Wrist",
+    "Chest",
+    "Thigh"
+  ],
+  "weights": "pretrained/featgoogle_norot.pth",
+  "seed": 42,
+  "n_classes": 11,
+  "num_sensors": 3,
+  "hyperparameters": {
+    "epochs": 100,
+    "batch_size": 128,
+    "learning_rate": 0.0001,
+    "patience": 5,
+    "weight_decay": 1e-05,
+    "scheduler": "CosineAnnealingLR",
+    "optimizer": "Adam",
+    "data_ratio": 0.01
+  },
+  "fold_results": [
+    {
+      "test_f1": 0.1490559829284233,
+      "test_acc": 0.18055555555555555,
+      "test_loss": 3.139693948957655,
+      "best_val_f1": 0.19422039948355743
+    },
+    {
+      "test_f1": 0.42616654577798274,
+      "test_acc": 0.5136986301369864,
+      "test_loss": 1.6000423104795691,
+      "best_val_f1": 0.48469288789291265
+    },
+    {
+      "test_f1": 0.5569956386670877,
+      "test_acc": 0.5734265734265734,
+      "test_loss": 1.4664866032300297,
+      "best_val_f1": 0.5593768572123043
+    },
+    {
+      "test_f1": 0.4313818880663801,
+      "test_acc": 0.5142857142857142,
+      "test_loss": 1.5447156599589758,
+      "best_val_f1": 0.5099246382318483
+    }
+  ],
+  "summary": {
+    "mean_f1": 0.3909000138599684,
+    "std_f1": 0.14912981114625737,
+    "mean_acc": 0.44549161835120743,
+    "std_acc": 0.15487357278760394
+  },
+  "timestamp": "20260722_220405"
+}

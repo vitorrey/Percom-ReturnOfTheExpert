@@ -1,0 +1,71 @@
+Using device: cuda:0
+Model: featgoogle_norot (Feature-regression (industry), no rotation aug)
+Weights: pretrained/featgoogle_norot.pth
+Loading dataset: ucaehar
+Sensors: ['SmartGlasses']
+Data shape: X=(7162, 3, 150), Y=(7162,), U=(7162,)
+Classes: 6, Sensors: 1
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.01s] train_loss=0.9242 val_loss=0.6860 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.52s] train_loss=0.1363 val_loss=0.6445
+  Epoch 3/100: 100%|██████████| 25/25 [0.50s] train_loss=0.0327 val_loss=0.6536
+  Epoch 4/100: 100%|██████████| 25/25 [0.49s] train_loss=0.0231 val_loss=0.8104 *
+  Epoch 5/100: 100%|██████████| 25/25 [0.52s] train_loss=0.0109 val_loss=0.6820 *
+  Epoch 6/100: 100%|██████████| 25/25 [0.49s] train_loss=0.0262 val_loss=0.8268
+  Epoch 7/100: 100%|██████████| 25/25 [0.52s] train_loss=0.0070 val_loss=0.8642
+  Epoch 8/100: 100%|██████████| 25/25 [0.50s] train_loss=0.0039 val_loss=0.8571
+  Epoch 9/100: 100%|██████████| 25/25 [0.49s] train_loss=0.0116 val_loss=1.0411
+  Epoch 10/100: 100%|██████████| 25/25 [0.52s] train_loss=0.0249 val_loss=1.1135
+  Early stopping at epoch 10 (patience=5)
+Fold 1 Result: F1=0.7411, Acc=0.7832
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.52s] train_loss=0.9445 val_loss=0.6729 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.52s] train_loss=0.1266 val_loss=0.9167
+  Epoch 3/100: 100%|██████████| 25/25 [0.49s] train_loss=0.0265 val_loss=0.9457
+  Epoch 4/100: 100%|██████████| 25/25 [0.52s] train_loss=0.0334 val_loss=1.0747
+  Epoch 5/100: 100%|██████████| 25/25 [0.50s] train_loss=0.0272 val_loss=1.0118
+  Epoch 6/100: 100%|██████████| 25/25 [0.50s] train_loss=0.0213 val_loss=1.3752
+  Early stopping at epoch 6 (patience=5)
+Fold 2 Result: F1=0.6345, Acc=0.6907
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.52s] train_loss=1.0377 val_loss=0.9923 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.49s] train_loss=0.1710 val_loss=0.9623 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.50s] train_loss=0.0284 val_loss=1.0158 *
+  Epoch 4/100: 100%|██████████| 25/25 [0.48s] train_loss=0.0137 val_loss=1.1248
+  Epoch 5/100: 100%|██████████| 25/25 [0.51s] train_loss=0.0083 val_loss=1.2993
+  Epoch 6/100: 100%|██████████| 25/25 [0.49s] train_loss=0.0063 val_loss=1.2981
+  Epoch 7/100: 100%|██████████| 25/25 [0.49s] train_loss=0.0050 val_loss=1.3936
+  Epoch 8/100: 100%|██████████| 25/25 [0.51s] train_loss=0.0037 val_loss=1.3541
+  Early stopping at epoch 8 (patience=5)
+Fold 3 Result: F1=0.7607, Acc=0.7681
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.50s] train_loss=0.9350 val_loss=0.8644 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.51s] train_loss=0.1241 val_loss=0.9170 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.49s] train_loss=0.0264 val_loss=0.8973 *
+  Epoch 4/100: 100%|██████████| 25/25 [0.52s] train_loss=0.0131 val_loss=0.9690
+  Epoch 5/100: 100%|██████████| 25/25 [0.50s] train_loss=0.0087 val_loss=1.0001
+  Epoch 6/100: 100%|██████████| 25/25 [0.50s] train_loss=0.0161 val_loss=1.6717
+  Epoch 7/100: 100%|██████████| 25/25 [0.51s] train_loss=0.0395 val_loss=2.7236
+  Epoch 8/100: 100%|██████████| 25/25 [0.49s] train_loss=0.0264 val_loss=1.5104
+  Early stopping at epoch 8 (patience=5)
+Fold 4 Result: F1=0.5951, Acc=0.6491
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.6829 +/- 0.0698
+Accuracy: 0.7228 +/- 0.0551
+
+Results saved to: results/benchmark/featgoogle_norot_ucaehar/20260722_221113_featgoogle_norot_fewshot/fewshot/ucaehar_ratio0.02/finetune/20260722_221141_featgoogle_norot/results.json

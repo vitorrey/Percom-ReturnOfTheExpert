@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: featstat (Feature-regression pretrain: statistical features)
+Weights: pretrained/featstat.pth
+Loading dataset: lara
+Sensors: ['LeftArm', 'LeftLeg', 'Neck', 'RightArm', 'RightLeg']
+Data shape: X=(3033, 15, 150), Y=(3033,), U=(3033,)
+Classes: 5, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 11/11 [1.42s] train_loss=0.5170 val_loss=0.4077 *
+  Epoch 2/100: 100%|██████████| 11/11 [0.99s] train_loss=0.0179 val_loss=0.3076
+  Epoch 3/100: 100%|██████████| 11/11 [0.93s] train_loss=0.0031 val_loss=0.3307
+  Epoch 4/100: 100%|██████████| 11/11 [0.92s] train_loss=0.0011 val_loss=0.3465
+  Epoch 5/100: 100%|██████████| 11/11 [0.92s] train_loss=0.0008 val_loss=0.3458
+  Epoch 6/100: 100%|██████████| 11/11 [0.92s] train_loss=0.0007 val_loss=0.3387
+  Early stopping at epoch 6 (patience=5)
+Fold 1 Result: F1=0.5508, Acc=0.8822
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 15/15 [1.25s] train_loss=0.3836 val_loss=0.4235 *
+  Epoch 2/100: 100%|██████████| 15/15 [1.17s] train_loss=0.0057 val_loss=0.4650 *
+  Epoch 3/100: 100%|██████████| 15/15 [1.18s] train_loss=0.0013 val_loss=0.4785 *
+  Epoch 4/100: 100%|██████████| 15/15 [1.17s] train_loss=0.0008 val_loss=0.4911 *
+  Epoch 5/100: 100%|██████████| 15/15 [1.17s] train_loss=0.0006 val_loss=0.5316
+  Epoch 6/100: 100%|██████████| 15/15 [1.17s] train_loss=0.0005 val_loss=0.4755 *
+  Epoch 7/100: 100%|██████████| 15/15 [1.17s] train_loss=0.0005 val_loss=0.5116
+  Epoch 8/100: 100%|██████████| 15/15 [1.18s] train_loss=0.0004 val_loss=0.4846
+  Epoch 9/100: 100%|██████████| 15/15 [1.17s] train_loss=0.0003 val_loss=0.5004
+  Epoch 10/100: 100%|██████████| 15/15 [1.17s] train_loss=0.0003 val_loss=0.4589
+  Epoch 11/100: 100%|██████████| 15/15 [1.17s] train_loss=0.0003 val_loss=0.4980
+  Early stopping at epoch 11 (patience=5)
+Fold 2 Result: F1=0.4147, Acc=0.8894
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 13/13 [1.11s] train_loss=0.4406 val_loss=0.4102 *
+  Epoch 2/100: 100%|██████████| 13/13 [1.10s] train_loss=0.0105 val_loss=0.3602
+  Epoch 3/100: 100%|██████████| 13/13 [1.11s] train_loss=0.0020 val_loss=0.3433
+  Epoch 4/100: 100%|██████████| 13/13 [1.11s] train_loss=0.0011 val_loss=0.3343
+  Epoch 5/100: 100%|██████████| 13/13 [1.11s] train_loss=0.0008 val_loss=0.3335
+  Epoch 6/100: 100%|██████████| 13/13 [1.11s] train_loss=0.0006 val_loss=0.3471
+  Early stopping at epoch 6 (patience=5)
+Fold 3 Result: F1=0.6316, Acc=0.8938
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 9/9 [0.82s] train_loss=0.6118 val_loss=0.5421 *
+  Epoch 2/100: 100%|██████████| 9/9 [0.82s] train_loss=0.0346 val_loss=0.3639 *
+  Epoch 3/100: 100%|██████████| 9/9 [0.82s] train_loss=0.0043 val_loss=0.3742 *
+  Epoch 4/100: 100%|██████████| 9/9 [0.82s] train_loss=0.0015 val_loss=0.4040
+  Epoch 5/100: 100%|██████████| 9/9 [0.82s] train_loss=0.0010 val_loss=0.4197
+  Epoch 6/100: 100%|██████████| 9/9 [0.81s] train_loss=0.0007 val_loss=0.4063
+  Epoch 7/100: 100%|██████████| 9/9 [0.82s] train_loss=0.0006 val_loss=0.4028
+  Epoch 8/100: 100%|██████████| 9/9 [0.82s] train_loss=0.0006 val_loss=0.4040
+  Early stopping at epoch 8 (patience=5)
+Fold 4 Result: F1=0.6000, Acc=0.9024
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.5493 +/- 0.0829
+Accuracy: 0.8920 +/- 0.0073
+
+Results saved to: results/benchmark/featstat_lara/20260716_192104_featstat_fewshot/fewshot/lara_ratio0.02/finetune/20260716_192200_featstat/results.json

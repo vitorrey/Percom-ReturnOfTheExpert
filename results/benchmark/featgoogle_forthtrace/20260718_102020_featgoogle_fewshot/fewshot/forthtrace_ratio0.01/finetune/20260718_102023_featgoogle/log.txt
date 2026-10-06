@@ -1,0 +1,69 @@
+Using device: cuda:0
+Model: featgoogle (Feature-regression pretrain: industry motion feature bank)
+Weights: pretrained/featgoogle.pth
+Loading dataset: forthtrace
+Sensors: ['LeftWrist', 'RightWrist', 'Torso', 'RightThigh', 'LeftAnkle']
+Data shape: X=(4142, 15, 150), Y=(4142,), U=(4142,)
+Classes: 11, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 23/23 [2.52s] train_loss=0.7116 val_loss=1.3016 *
+  Epoch 2/100: 100%|██████████| 23/23 [1.84s] train_loss=0.0124 val_loss=1.4443
+  Epoch 3/100: 100%|██████████| 23/23 [1.85s] train_loss=0.0031 val_loss=1.5043
+  Epoch 4/100: 100%|██████████| 23/23 [1.84s] train_loss=0.0021 val_loss=1.5812
+  Epoch 5/100: 100%|██████████| 23/23 [1.83s] train_loss=0.0015 val_loss=1.5468
+  Epoch 6/100: 100%|██████████| 23/23 [1.84s] train_loss=0.0013 val_loss=1.5365
+  Early stopping at epoch 6 (patience=5)
+Fold 1 Result: F1=0.2489, Acc=0.4428
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [1.98s] train_loss=0.6866 val_loss=1.1918 *
+  Epoch 2/100: 100%|██████████| 24/24 [1.91s] train_loss=0.0112 val_loss=1.5770
+  Epoch 3/100: 100%|██████████| 24/24 [1.98s] train_loss=0.0029 val_loss=1.6243
+  Epoch 4/100: 100%|██████████| 24/24 [1.91s] train_loss=0.0020 val_loss=1.5335
+  Epoch 5/100: 100%|██████████| 24/24 [1.90s] train_loss=0.0015 val_loss=1.6659
+  Epoch 6/100: 100%|██████████| 24/24 [1.89s] train_loss=0.0011 val_loss=1.6587
+  Early stopping at epoch 6 (patience=5)
+Fold 2 Result: F1=0.4792, Acc=0.7559
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [1.99s] train_loss=0.6649 val_loss=1.3120 *
+  Epoch 2/100: 100%|██████████| 24/24 [1.94s] train_loss=0.0097 val_loss=1.3973 *
+  Epoch 3/100: 100%|██████████| 24/24 [1.96s] train_loss=0.0027 val_loss=1.4648
+  Epoch 4/100: 100%|██████████| 24/24 [1.97s] train_loss=0.0018 val_loss=1.4708
+  Epoch 5/100: 100%|██████████| 24/24 [1.95s] train_loss=0.0016 val_loss=1.5063
+  Epoch 6/100: 100%|██████████| 24/24 [1.94s] train_loss=0.0011 val_loss=1.5738
+  Epoch 7/100: 100%|██████████| 24/24 [1.93s] train_loss=0.0010 val_loss=1.6071
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.4266, Acc=0.5768
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 23/23 [1.92s] train_loss=0.7087 val_loss=1.4282 *
+  Epoch 2/100: 100%|██████████| 23/23 [1.85s] train_loss=0.0131 val_loss=1.5991
+  Epoch 3/100: 100%|██████████| 23/23 [1.87s] train_loss=0.0030 val_loss=1.8064
+  Epoch 4/100: 100%|██████████| 23/23 [1.96s] train_loss=0.0019 val_loss=1.7658
+  Epoch 5/100: 100%|██████████| 23/23 [1.85s] train_loss=0.0015 val_loss=1.8553 *
+  Epoch 6/100: 100%|██████████| 23/23 [1.87s] train_loss=0.0012 val_loss=1.8472 *
+  Epoch 7/100: 100%|██████████| 23/23 [1.87s] train_loss=0.0010 val_loss=1.8244
+  Epoch 8/100: 100%|██████████| 23/23 [1.85s] train_loss=0.0009 val_loss=1.8449
+  Epoch 9/100: 100%|██████████| 23/23 [1.86s] train_loss=0.0007 val_loss=1.9468
+  Epoch 10/100: 100%|██████████| 23/23 [1.85s] train_loss=0.0007 val_loss=1.9693
+  Epoch 11/100: 100%|██████████| 23/23 [1.87s] train_loss=0.0006 val_loss=1.9973
+  Early stopping at epoch 11 (patience=5)
+Fold 4 Result: F1=0.3522, Acc=0.5758
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.3767 +/- 0.0865
+Accuracy: 0.5879 +/- 0.1113
+
+Results saved to: results/benchmark/featgoogle_forthtrace/20260718_102020_featgoogle_fewshot/fewshot/forthtrace_ratio0.01/finetune/20260718_102023_featgoogle/results.json

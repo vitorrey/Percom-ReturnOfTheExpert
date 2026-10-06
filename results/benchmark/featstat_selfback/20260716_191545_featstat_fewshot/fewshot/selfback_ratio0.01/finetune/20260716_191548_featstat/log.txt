@@ -1,0 +1,69 @@
+Using device: cuda:0
+Model: featstat (Feature-regression pretrain: statistical features)
+Weights: pretrained/featstat.pth
+Loading dataset: selfback
+Sensors: ['Wrist', 'Thigh']
+Data shape: X=(15464, 6, 150), Y=(15464,), U=(15464,)
+Classes: 9, Sensors: 2
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.56s] train_loss=0.9180 val_loss=0.7051 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0955 val_loss=0.8887 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0259 val_loss=0.7906
+  Epoch 4/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0120 val_loss=0.9449 *
+  Epoch 5/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0092 val_loss=1.2582
+  Epoch 6/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0071 val_loss=0.9857
+  Epoch 7/100: 100%|██████████| 25/25 [1.10s] train_loss=0.0054 val_loss=0.9198
+  Epoch 8/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0031 val_loss=1.3007
+  Epoch 9/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0026 val_loss=1.2640
+  Early stopping at epoch 9 (patience=5)
+Fold 1 Result: F1=0.7142, Acc=0.7125
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.11s] train_loss=0.9098 val_loss=0.6537 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.09s] train_loss=0.1050 val_loss=0.7962 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0510 val_loss=1.0608
+  Epoch 4/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0267 val_loss=1.0079
+  Epoch 5/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0120 val_loss=1.0678
+  Epoch 6/100: 100%|██████████| 25/25 [1.10s] train_loss=0.0087 val_loss=1.1217
+  Epoch 7/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0094 val_loss=1.3005
+  Early stopping at epoch 7 (patience=5)
+Fold 2 Result: F1=0.8386, Acc=0.8386
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.11s] train_loss=0.9267 val_loss=0.4894 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.10s] train_loss=0.0828 val_loss=0.3569 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0149 val_loss=0.3714
+  Epoch 4/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0117 val_loss=0.4493
+  Epoch 5/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0104 val_loss=0.4879
+  Epoch 6/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0073 val_loss=0.4391
+  Epoch 7/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0033 val_loss=0.4336
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.8483, Acc=0.8619
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.10s] train_loss=0.8891 val_loss=0.7614 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.10s] train_loss=0.0994 val_loss=0.7906 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0507 val_loss=0.9986
+  Epoch 4/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0331 val_loss=1.1435
+  Epoch 5/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0278 val_loss=1.0155
+  Epoch 6/100: 100%|██████████| 25/25 [1.09s] train_loss=0.0209 val_loss=1.3507
+  Epoch 7/100: 100%|██████████| 25/25 [1.10s] train_loss=0.0081 val_loss=1.1455
+  Early stopping at epoch 7 (patience=5)
+Fold 4 Result: F1=0.7627, Acc=0.7895
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.7909 +/- 0.0553
+Accuracy: 0.8006 +/- 0.0572
+
+Results saved to: results/benchmark/featstat_selfback/20260716_191545_featstat_fewshot/fewshot/selfback_ratio0.01/finetune/20260716_191548_featstat/results.json

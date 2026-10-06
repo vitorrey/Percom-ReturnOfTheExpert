@@ -1,0 +1,110 @@
+Using device: cuda:0
+Model: featunion (Feature-regression pretrain: union of all three banks (deduped))
+Weights: pretrained/featunion.pth
+Zero-shot LODO Evaluation (4-seed average: [42, 43, 44, 45])
+
+============================================================
+Target: mhealth (Zero-shot)
+============================================================
+  Loaded dsads: 6442 samples
+  Loaded pamap2: 4319 samples
+  Loaded forthtrace: 4071 samples
+  Loaded realdisp: 1508 samples
+  Loaded realworld: 20659 samples
+  Loaded selfback: 15464 samples
+  Loaded ward: 4727 samples
+
+  --- Seed 42 (1/4) ---
+  Train: 45752 samples, Val: 11438 samples
+  Target test: 1572 samples
+  Epoch 1/100: 100%|██████████| 50/50 [2.64s] train_loss=0.5818 val_loss=0.2407 *
+  Epoch 2/100: 100%|██████████| 50/50 [2.30s] train_loss=0.1702 val_loss=0.1497 *
+  Epoch 3/100: 100%|██████████| 50/50 [2.28s] train_loss=0.1237 val_loss=0.1321 *
+  Epoch 4/100: 100%|██████████| 50/50 [2.28s] train_loss=0.1066 val_loss=0.1215 *
+  Epoch 5/100: 100%|██████████| 50/50 [2.30s] train_loss=0.1146 val_loss=0.1131
+  Epoch 6/100: 100%|██████████| 50/50 [2.29s] train_loss=0.1103 val_loss=0.1247
+  Epoch 7/100: 100%|██████████| 50/50 [2.29s] train_loss=0.1166 val_loss=0.1373
+  Epoch 8/100: 100%|██████████| 50/50 [2.29s] train_loss=0.0838 val_loss=0.0960 *
+  Epoch 9/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0879 val_loss=0.0894 *
+  Epoch 10/100: 100%|██████████| 50/50 [2.29s] train_loss=0.1045 val_loss=0.1085
+  Epoch 11/100: 100%|██████████| 50/50 [2.28s] train_loss=0.0812 val_loss=0.0897
+  Epoch 12/100: 100%|██████████| 50/50 [2.31s] train_loss=0.0949 val_loss=0.0967
+  Epoch 13/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0836 val_loss=0.0890
+  Epoch 14/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0751 val_loss=0.0888
+  Early stopping at epoch 14
+  Seed 42 Result: F1=0.7426, Acc=0.8333
+
+  --- Seed 43 (2/4) ---
+  Train: 45752 samples, Val: 11438 samples
+  Target test: 1572 samples
+  Epoch 1/100: 100%|██████████| 50/50 [2.35s] train_loss=0.5514 val_loss=0.2005 *
+  Epoch 2/100: 100%|██████████| 50/50 [2.29s] train_loss=0.1545 val_loss=0.1577 *
+  Epoch 3/100: 100%|██████████| 50/50 [2.31s] train_loss=0.1395 val_loss=0.1228 *
+  Epoch 4/100: 100%|██████████| 50/50 [2.30s] train_loss=0.1315 val_loss=0.1332
+  Epoch 5/100: 100%|██████████| 50/50 [2.33s] train_loss=0.1065 val_loss=0.1250 *
+  Epoch 6/100: 100%|██████████| 50/50 [2.29s] train_loss=0.1207 val_loss=0.1335
+  Epoch 7/100: 100%|██████████| 50/50 [2.29s] train_loss=0.1135 val_loss=0.1591
+  Epoch 8/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0996 val_loss=0.1069
+  Epoch 9/100: 100%|██████████| 50/50 [2.29s] train_loss=0.0790 val_loss=0.1189
+  Epoch 10/100: 100%|██████████| 50/50 [2.30s] train_loss=0.1101 val_loss=0.1430
+  Early stopping at epoch 10
+  Seed 43 Result: F1=0.6596, Acc=0.7799
+
+  --- Seed 44 (3/4) ---
+  Train: 45752 samples, Val: 11438 samples
+  Target test: 1572 samples
+  Epoch 1/100: 100%|██████████| 50/50 [2.30s] train_loss=0.5682 val_loss=0.2111 *
+  Epoch 2/100: 100%|██████████| 50/50 [2.30s] train_loss=0.1582 val_loss=0.1310 *
+  Epoch 3/100: 100%|██████████| 50/50 [2.30s] train_loss=0.1388 val_loss=0.1579
+  Epoch 4/100: 100%|██████████| 50/50 [2.30s] train_loss=0.1329 val_loss=0.1182 *
+  Epoch 5/100: 100%|██████████| 50/50 [2.29s] train_loss=0.1153 val_loss=0.1236
+  Epoch 6/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0940 val_loss=0.1081 *
+  Epoch 7/100: 100%|██████████| 50/50 [2.29s] train_loss=0.1018 val_loss=0.1125
+  Epoch 8/100: 100%|██████████| 50/50 [2.36s] train_loss=0.1047 val_loss=0.1013 *
+  Epoch 9/100: 100%|██████████| 50/50 [2.33s] train_loss=0.0866 val_loss=0.1015 *
+  Epoch 10/100: 100%|██████████| 50/50 [2.35s] train_loss=0.0955 val_loss=0.0972 *
+  Epoch 11/100: 100%|██████████| 50/50 [2.33s] train_loss=0.0945 val_loss=0.0988
+  Epoch 12/100: 100%|██████████| 50/50 [2.35s] train_loss=0.0851 val_loss=0.1122
+  Epoch 13/100: 100%|██████████| 50/50 [2.33s] train_loss=0.0857 val_loss=0.0889
+  Epoch 14/100: 100%|██████████| 50/50 [2.33s] train_loss=0.0668 val_loss=0.0964
+  Epoch 15/100: 100%|██████████| 50/50 [2.37s] train_loss=0.0712 val_loss=0.0794
+  Early stopping at epoch 15
+  Seed 44 Result: F1=0.8274, Acc=0.8849
+
+  --- Seed 45 (4/4) ---
+  Train: 45752 samples, Val: 11438 samples
+  Target test: 1572 samples
+  Epoch 1/100: 100%|██████████| 50/50 [2.31s] train_loss=0.5423 val_loss=0.1649 *
+  Epoch 2/100: 100%|██████████| 50/50 [2.33s] train_loss=0.1696 val_loss=0.1485 *
+  Epoch 3/100: 100%|██████████| 50/50 [2.35s] train_loss=0.1441 val_loss=0.1533
+  Epoch 4/100: 100%|██████████| 50/50 [2.30s] train_loss=0.1349 val_loss=0.1192 *
+  Epoch 5/100: 100%|██████████| 50/50 [2.31s] train_loss=0.1352 val_loss=0.1046 *
+  Epoch 6/100: 100%|██████████| 50/50 [2.31s] train_loss=0.1090 val_loss=0.0997 *
+  Epoch 7/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0958 val_loss=0.0896 *
+  Epoch 8/100: 100%|██████████| 50/50 [2.29s] train_loss=0.0890 val_loss=0.0910
+  Epoch 9/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0869 val_loss=0.0910 *
+  Epoch 10/100: 100%|██████████| 50/50 [2.31s] train_loss=0.1077 val_loss=0.1063
+  Epoch 11/100: 100%|██████████| 50/50 [2.32s] train_loss=0.1002 val_loss=0.1061
+  Epoch 12/100: 100%|██████████| 50/50 [2.31s] train_loss=0.0797 val_loss=0.0932
+  Epoch 13/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0907 val_loss=0.0822 *
+  Epoch 14/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0922 val_loss=0.0848
+  Epoch 15/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0917 val_loss=0.1000
+  Epoch 16/100: 100%|██████████| 50/50 [2.29s] train_loss=0.0799 val_loss=0.0845
+  Epoch 17/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0715 val_loss=0.0882 *
+  Epoch 18/100: 100%|██████████| 50/50 [2.32s] train_loss=0.0642 val_loss=0.0658 *
+  Epoch 19/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0716 val_loss=0.0819
+  Epoch 20/100: 100%|██████████| 50/50 [2.31s] train_loss=0.0603 val_loss=0.0812
+  Epoch 21/100: 100%|██████████| 50/50 [2.31s] train_loss=0.0637 val_loss=0.0768
+  Epoch 22/100: 100%|██████████| 50/50 [2.29s] train_loss=0.0593 val_loss=0.0788
+  Epoch 23/100: 100%|██████████| 50/50 [2.30s] train_loss=0.0761 val_loss=0.0903
+  Early stopping at epoch 23
+  Seed 45 Result: F1=0.7728, Acc=0.8416
+Target mhealth Result: F1=0.7506 (±0.0607), Acc=0.8349
+
+============================================================
+Zero-shot Results Summary (4-seed average)
+============================================================
+  mhealth: F1=0.7506 (±0.0607)
+  Average: F1=0.7506
+
+Results saved to: results/benchmark/featunion_zeroshot/20260720_143444_featunion_zeroshot/zeroshot/20260720_143705_featunion_zeroshot_mhealth/results.json

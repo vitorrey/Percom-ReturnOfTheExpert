@@ -1,0 +1,71 @@
+Using device: cuda:0
+Model: mtl (Multi-Task Learning pretrained ResNet)
+Weights: pretrained/mtl.pth
+Loading dataset: realworld
+Sensors: ['Chest']
+Data shape: X=(21216, 3, 150), Y=(21216,), U=(21216,)
+Classes: 8, Sensors: 1
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.27s] train_loss=1.6131 val_loss=1.2353 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.68s] train_loss=0.7836 val_loss=0.7382 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.68s] train_loss=0.3806 val_loss=0.7944
+  Epoch 4/100: 100%|██████████| 25/25 [0.67s] train_loss=0.2501 val_loss=0.7003
+  Epoch 5/100: 100%|██████████| 25/25 [0.68s] train_loss=0.2537 val_loss=0.6446
+  Epoch 6/100: 100%|██████████| 25/25 [0.67s] train_loss=0.2011 val_loss=0.6727
+  Epoch 7/100: 100%|██████████| 25/25 [0.67s] train_loss=0.1815 val_loss=0.7014
+  Early stopping at epoch 7 (patience=5)
+Fold 1 Result: F1=0.8228, Acc=0.8032
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.72s] train_loss=1.6318 val_loss=1.2069 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.69s] train_loss=0.7570 val_loss=0.7291 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.69s] train_loss=0.3664 val_loss=0.6264
+  Epoch 4/100: 100%|██████████| 25/25 [0.69s] train_loss=0.2779 val_loss=0.5920
+  Epoch 5/100: 100%|██████████| 25/25 [0.69s] train_loss=0.2250 val_loss=0.6491
+  Epoch 6/100: 100%|██████████| 25/25 [0.69s] train_loss=0.1599 val_loss=0.6618
+  Epoch 7/100: 100%|██████████| 25/25 [0.69s] train_loss=0.1749 val_loss=0.6326
+  Early stopping at epoch 7 (patience=5)
+Fold 2 Result: F1=0.8600, Acc=0.8319
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.69s] train_loss=1.5896 val_loss=1.7435 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.67s] train_loss=0.7553 val_loss=1.6183
+  Epoch 3/100: 100%|██████████| 25/25 [0.68s] train_loss=0.3699 val_loss=1.9014
+  Epoch 4/100: 100%|██████████| 25/25 [0.67s] train_loss=0.2557 val_loss=2.3517
+  Epoch 5/100: 100%|██████████| 25/25 [0.67s] train_loss=0.1956 val_loss=2.0818
+  Epoch 6/100: 100%|██████████| 25/25 [0.67s] train_loss=0.1880 val_loss=2.4706
+  Early stopping at epoch 6 (patience=5)
+Fold 3 Result: F1=0.7066, Acc=0.7014
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.68s] train_loss=1.5885 val_loss=1.0631 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.68s] train_loss=0.7534 val_loss=0.7005 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.68s] train_loss=0.4015 val_loss=0.4647 *
+  Epoch 4/100: 100%|██████████| 25/25 [0.69s] train_loss=0.2826 val_loss=0.5277
+  Epoch 5/100: 100%|██████████| 25/25 [0.68s] train_loss=0.2481 val_loss=0.9163
+  Epoch 6/100: 100%|██████████| 25/25 [0.68s] train_loss=0.2334 val_loss=0.6157
+  Epoch 7/100: 100%|██████████| 25/25 [0.68s] train_loss=0.1897 val_loss=0.3113 *
+  Epoch 8/100: 100%|██████████| 25/25 [0.68s] train_loss=0.1956 val_loss=0.4473
+  Epoch 9/100: 100%|██████████| 25/25 [0.68s] train_loss=0.1657 val_loss=0.6707
+  Epoch 10/100: 100%|██████████| 25/25 [0.68s] train_loss=0.1943 val_loss=0.4961
+  Epoch 11/100: 100%|██████████| 25/25 [0.68s] train_loss=0.1730 val_loss=0.4985
+  Epoch 12/100: 100%|██████████| 25/25 [0.68s] train_loss=0.1226 val_loss=0.6103
+  Early stopping at epoch 12 (patience=5)
+Fold 4 Result: F1=0.5058, Acc=0.4927
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.7238 +/- 0.1380
+Accuracy: 0.7073 +/- 0.1330
+
+Results saved to: results/benchmark/mtl_realworld/20260716_233120_mtl_position/position/realworld_Chest/finetune/20260716_233334_mtl/results.json

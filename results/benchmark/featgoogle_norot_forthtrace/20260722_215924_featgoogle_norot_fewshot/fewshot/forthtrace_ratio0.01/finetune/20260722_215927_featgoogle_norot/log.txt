@@ -1,0 +1,69 @@
+Using device: cuda:0
+Model: featgoogle_norot (Feature-regression (industry), no rotation aug)
+Weights: pretrained/featgoogle_norot.pth
+Loading dataset: forthtrace
+Sensors: ['LeftWrist', 'RightWrist', 'Torso', 'RightThigh', 'LeftAnkle']
+Data shape: X=(4142, 15, 150), Y=(4142,), U=(4142,)
+Classes: 11, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 23/23 [2.17s] train_loss=0.6985 val_loss=1.1473 *
+  Epoch 2/100: 100%|██████████| 23/23 [1.69s] train_loss=0.0118 val_loss=1.1827
+  Epoch 3/100: 100%|██████████| 23/23 [1.69s] train_loss=0.0027 val_loss=1.2763
+  Epoch 4/100: 100%|██████████| 23/23 [1.69s] train_loss=0.0018 val_loss=1.3306
+  Epoch 5/100: 100%|██████████| 23/23 [1.69s] train_loss=0.0013 val_loss=1.3257
+  Epoch 6/100: 100%|██████████| 23/23 [1.70s] train_loss=0.0011 val_loss=1.2988
+  Early stopping at epoch 6 (patience=5)
+Fold 1 Result: F1=0.3061, Acc=0.5185
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [1.80s] train_loss=0.6862 val_loss=1.3262 *
+  Epoch 2/100: 100%|██████████| 24/24 [1.74s] train_loss=0.0107 val_loss=1.6405
+  Epoch 3/100: 100%|██████████| 24/24 [1.74s] train_loss=0.0027 val_loss=1.7354
+  Epoch 4/100: 100%|██████████| 24/24 [1.75s] train_loss=0.0019 val_loss=1.8029
+  Epoch 5/100: 100%|██████████| 24/24 [1.74s] train_loss=0.0015 val_loss=1.7425
+  Epoch 6/100: 100%|██████████| 24/24 [1.75s] train_loss=0.0011 val_loss=1.8051
+  Early stopping at epoch 6 (patience=5)
+Fold 2 Result: F1=0.5546, Acc=0.7132
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [1.82s] train_loss=0.6698 val_loss=1.1974 *
+  Epoch 2/100: 100%|██████████| 24/24 [1.76s] train_loss=0.0094 val_loss=1.2720 *
+  Epoch 3/100: 100%|██████████| 24/24 [1.77s] train_loss=0.0025 val_loss=1.3666
+  Epoch 4/100: 100%|██████████| 24/24 [1.76s] train_loss=0.0017 val_loss=1.3810
+  Epoch 5/100: 100%|██████████| 24/24 [1.76s] train_loss=0.0015 val_loss=1.3607
+  Epoch 6/100: 100%|██████████| 24/24 [1.76s] train_loss=0.0011 val_loss=1.4143
+  Epoch 7/100: 100%|██████████| 24/24 [1.76s] train_loss=0.0009 val_loss=1.4516
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.3947, Acc=0.5811
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 23/23 [1.72s] train_loss=0.6945 val_loss=1.3739 *
+  Epoch 2/100: 100%|██████████| 23/23 [1.68s] train_loss=0.0111 val_loss=1.6664 *
+  Epoch 3/100: 100%|██████████| 23/23 [1.68s] train_loss=0.0029 val_loss=1.8726
+  Epoch 4/100: 100%|██████████| 23/23 [1.76s] train_loss=0.0018 val_loss=1.8377
+  Epoch 5/100: 100%|██████████| 23/23 [1.68s] train_loss=0.0015 val_loss=1.9224 *
+  Epoch 6/100: 100%|██████████| 23/23 [1.69s] train_loss=0.0012 val_loss=1.9288 *
+  Epoch 7/100: 100%|██████████| 23/23 [1.69s] train_loss=0.0010 val_loss=1.8688
+  Epoch 8/100: 100%|██████████| 23/23 [1.69s] train_loss=0.0008 val_loss=1.9154
+  Epoch 9/100: 100%|██████████| 23/23 [1.68s] train_loss=0.0007 val_loss=2.0308
+  Epoch 10/100: 100%|██████████| 23/23 [1.68s] train_loss=0.0007 val_loss=2.0251
+  Epoch 11/100: 100%|██████████| 23/23 [1.68s] train_loss=0.0006 val_loss=2.0140
+  Early stopping at epoch 11 (patience=5)
+Fold 4 Result: F1=0.3791, Acc=0.5855
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.4086 +/- 0.0907
+Accuracy: 0.5996 +/- 0.0707
+
+Results saved to: results/benchmark/featgoogle_norot_forthtrace/20260722_215924_featgoogle_norot_fewshot/fewshot/forthtrace_ratio0.01/finetune/20260722_215927_featgoogle_norot/results.json

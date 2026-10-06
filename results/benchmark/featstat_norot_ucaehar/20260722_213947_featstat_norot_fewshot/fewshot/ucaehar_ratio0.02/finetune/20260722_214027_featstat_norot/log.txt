@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: featstat_norot (Feature-regression (statistical), no rotation aug)
+Weights: pretrained/featstat_norot.pth
+Loading dataset: ucaehar
+Sensors: ['SmartGlasses']
+Data shape: X=(7162, 3, 150), Y=(7162,), U=(7162,)
+Classes: 6, Sensors: 1
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.14s] train_loss=0.9225 val_loss=0.7380 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.63s] train_loss=0.1420 val_loss=0.6871
+  Epoch 3/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0317 val_loss=0.7962
+  Epoch 4/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0131 val_loss=0.8203 *
+  Epoch 5/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0079 val_loss=0.8725
+  Epoch 6/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0057 val_loss=0.8781
+  Epoch 7/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0043 val_loss=0.9093
+  Epoch 8/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0033 val_loss=0.9542
+  Epoch 9/100: 100%|██████████| 25/25 [0.62s] train_loss=0.0029 val_loss=0.9374
+  Early stopping at epoch 9 (patience=5)
+Fold 1 Result: F1=0.6504, Acc=0.7201
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.64s] train_loss=0.9278 val_loss=0.8711 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.63s] train_loss=0.1372 val_loss=0.8765 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0332 val_loss=1.0304 *
+  Epoch 4/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0130 val_loss=0.9702 *
+  Epoch 5/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0079 val_loss=1.1846
+  Epoch 6/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0056 val_loss=1.0975
+  Epoch 7/100: 100%|██████████| 25/25 [0.62s] train_loss=0.0045 val_loss=1.3173
+  Epoch 8/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0033 val_loss=1.3022
+  Epoch 9/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0026 val_loss=1.3004
+  Early stopping at epoch 9 (patience=5)
+Fold 2 Result: F1=0.6062, Acc=0.6907
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.63s] train_loss=0.9348 val_loss=1.0037 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.60s] train_loss=0.1383 val_loss=1.2782
+  Epoch 3/100: 100%|██████████| 25/25 [0.61s] train_loss=0.0278 val_loss=1.4883
+  Epoch 4/100: 100%|██████████| 25/25 [0.61s] train_loss=0.0120 val_loss=1.5616
+  Epoch 5/100: 100%|██████████| 25/25 [0.61s] train_loss=0.0080 val_loss=1.6761
+  Epoch 6/100: 100%|██████████| 25/25 [0.62s] train_loss=0.0117 val_loss=1.4829
+  Early stopping at epoch 6 (patience=5)
+Fold 3 Result: F1=0.7416, Acc=0.7754
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.63s] train_loss=0.9133 val_loss=0.8070 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.63s] train_loss=0.1387 val_loss=0.8203 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0302 val_loss=1.1033
+  Epoch 4/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0128 val_loss=1.2412
+  Epoch 5/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0083 val_loss=1.2552
+  Epoch 6/100: 100%|██████████| 25/25 [0.63s] train_loss=0.0065 val_loss=1.8885
+  Epoch 7/100: 100%|██████████| 25/25 [0.62s] train_loss=0.0267 val_loss=1.3513
+  Early stopping at epoch 7 (patience=5)
+Fold 4 Result: F1=0.5605, Acc=0.6247
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.6397 +/- 0.0669
+Accuracy: 0.7027 +/- 0.0544
+
+Results saved to: results/benchmark/featstat_norot_ucaehar/20260722_213947_featstat_norot_fewshot/fewshot/ucaehar_ratio0.02/finetune/20260722_214027_featstat_norot/results.json

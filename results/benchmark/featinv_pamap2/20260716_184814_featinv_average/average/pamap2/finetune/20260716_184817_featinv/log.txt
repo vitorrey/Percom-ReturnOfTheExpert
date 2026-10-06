@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: featinv (Feature-regression pretrain: invariant physical features)
+Weights: pretrained/featinv.pth
+Loading dataset: pamap2
+Sensors: ['hand', 'chest', 'ankle']
+Data shape: X=(6284, 9, 150), Y=(6284,), U=(6284,)
+Classes: 12, Sensors: 3
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.56s] train_loss=1.0567 val_loss=0.4749 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.19s] train_loss=0.2160 val_loss=0.4468
+  Epoch 3/100: 100%|██████████| 25/25 [1.25s] train_loss=0.1728 val_loss=0.3761
+  Epoch 4/100: 100%|██████████| 25/25 [1.19s] train_loss=0.1225 val_loss=0.3840
+  Epoch 5/100: 100%|██████████| 25/25 [1.19s] train_loss=0.1047 val_loss=0.3893
+  Epoch 6/100: 100%|██████████| 25/25 [1.19s] train_loss=0.0911 val_loss=0.4356
+  Early stopping at epoch 6 (patience=5)
+Fold 1 Result: F1=0.7957, Acc=0.8023
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.24s] train_loss=1.1110 val_loss=0.5170 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.22s] train_loss=0.2435 val_loss=0.3735 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.22s] train_loss=0.1386 val_loss=0.3083 *
+  Epoch 4/100: 100%|██████████| 25/25 [1.22s] train_loss=0.1254 val_loss=0.3615
+  Epoch 5/100: 100%|██████████| 25/25 [1.22s] train_loss=0.1024 val_loss=0.4087
+  Epoch 6/100: 100%|██████████| 25/25 [1.22s] train_loss=0.0804 val_loss=0.3058
+  Epoch 7/100: 100%|██████████| 25/25 [1.22s] train_loss=0.0721 val_loss=0.3684
+  Epoch 8/100: 100%|██████████| 25/25 [1.22s] train_loss=0.0683 val_loss=0.4341
+  Early stopping at epoch 8 (patience=5)
+Fold 2 Result: F1=0.7110, Acc=0.8207
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [1.22s] train_loss=1.1455 val_loss=0.5655 *
+  Epoch 2/100: 100%|██████████| 24/24 [1.16s] train_loss=0.2834 val_loss=0.5405
+  Epoch 3/100: 100%|██████████| 24/24 [1.16s] train_loss=0.1547 val_loss=0.5453
+  Epoch 4/100: 100%|██████████| 24/24 [1.16s] train_loss=0.1215 val_loss=0.5959
+  Epoch 5/100: 100%|██████████| 24/24 [1.16s] train_loss=0.0963 val_loss=0.5467
+  Epoch 6/100: 100%|██████████| 24/24 [1.17s] train_loss=0.0848 val_loss=0.7192
+  Early stopping at epoch 6 (patience=5)
+Fold 3 Result: F1=0.8898, Acc=0.8830
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [1.20s] train_loss=1.0996 val_loss=0.5568 *
+  Epoch 2/100: 100%|██████████| 24/24 [1.16s] train_loss=0.2609 val_loss=0.5117 *
+  Epoch 3/100: 100%|██████████| 24/24 [1.16s] train_loss=0.1573 val_loss=0.5025
+  Epoch 4/100: 100%|██████████| 24/24 [1.16s] train_loss=0.1056 val_loss=0.4494 *
+  Epoch 5/100: 100%|██████████| 24/24 [1.16s] train_loss=0.0867 val_loss=0.5655
+  Epoch 6/100: 100%|██████████| 24/24 [1.16s] train_loss=0.0721 val_loss=0.4286 *
+  Epoch 7/100: 100%|██████████| 24/24 [1.16s] train_loss=0.0512 val_loss=0.5973
+  Epoch 8/100: 100%|██████████| 24/24 [1.16s] train_loss=0.0544 val_loss=0.6887
+  Epoch 9/100: 100%|██████████| 24/24 [1.16s] train_loss=0.0439 val_loss=0.4808
+  Epoch 10/100: 100%|██████████| 24/24 [1.24s] train_loss=0.0299 val_loss=0.5553
+  Epoch 11/100: 100%|██████████| 24/24 [1.16s] train_loss=0.0339 val_loss=0.5218
+  Early stopping at epoch 11 (patience=5)
+Fold 4 Result: F1=0.8730, Acc=0.8933
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.8174 +/- 0.0709
+Accuracy: 0.8498 +/- 0.0390
+
+Results saved to: results/benchmark/featinv_pamap2/20260716_184814_featinv_average/average/pamap2/finetune/20260716_184817_featinv/results.json

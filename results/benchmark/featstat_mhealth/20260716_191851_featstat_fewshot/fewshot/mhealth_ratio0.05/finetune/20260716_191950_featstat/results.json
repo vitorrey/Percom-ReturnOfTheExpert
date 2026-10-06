@@ -1,0 +1,58 @@
+{
+  "mode": "finetune",
+  "model": "featstat",
+  "model_type": "resnet",
+  "dataset": "mhealth",
+  "sensors": [
+    "Chest",
+    "LeftAnkle",
+    "RightWrist"
+  ],
+  "weights": "pretrained/featstat.pth",
+  "seed": 42,
+  "n_classes": 12,
+  "num_sensors": 3,
+  "hyperparameters": {
+    "epochs": 100,
+    "batch_size": 128,
+    "learning_rate": 0.0001,
+    "patience": 5,
+    "weight_decay": 1e-05,
+    "scheduler": "CosineAnnealingLR",
+    "optimizer": "Adam",
+    "data_ratio": 0.05
+  },
+  "fold_results": [
+    {
+      "test_f1": 0.9048864908629008,
+      "test_acc": 0.908675799086758,
+      "test_loss": 0.4159893604446219,
+      "best_val_f1": 0.8599746366208175
+    },
+    {
+      "test_f1": 0.8159508996248359,
+      "test_acc": 0.876993166287016,
+      "test_loss": 0.31503258455451366,
+      "best_val_f1": 0.9533565812049378
+    },
+    {
+      "test_f1": 0.9025855123416099,
+      "test_acc": 0.9144254278728606,
+      "test_loss": 0.35771935568862845,
+      "best_val_f1": 0.9163609684519441
+    },
+    {
+      "test_f1": 0.9730506102599126,
+      "test_acc": 0.9707317073170731,
+      "test_loss": 0.14672879227777808,
+      "best_val_f1": 0.9692905961300275
+    }
+  ],
+  "summary": {
+    "mean_f1": 0.8991183782723148,
+    "std_f1": 0.05574068660493647,
+    "mean_acc": 0.917706525140927,
+    "std_acc": 0.0337696873924263
+  },
+  "timestamp": "20260716_191950"
+}

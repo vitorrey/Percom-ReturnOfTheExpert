@@ -1,0 +1,69 @@
+Using device: cuda:0
+Model: timechannel (Masked Resnet (time+channel masking))
+Weights: pretrained/timechannel.pth
+Loading dataset: exoskeletons
+Sensors: ['Chest', 'RightLeg', 'LeftLeg', 'RightWrist', 'LeftWrist']
+Data shape: X=(5678, 15, 150), Y=(5678,), U=(5678,)
+Classes: 4, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [3.18s] train_loss=0.3444 val_loss=0.0449 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0047 val_loss=0.0405 *
+  Epoch 3/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0011 val_loss=0.0453
+  Epoch 4/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0007 val_loss=0.0462
+  Epoch 5/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0005 val_loss=0.0444
+  Epoch 6/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0004 val_loss=0.0458
+  Epoch 7/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0004 val_loss=0.0467
+  Early stopping at epoch 7 (patience=5)
+Fold 1 Result: F1=0.9744, Acc=0.9873
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.62s] train_loss=0.3417 val_loss=0.0616 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0113 val_loss=0.0318 *
+  Epoch 3/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0067 val_loss=0.0447
+  Epoch 4/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0018 val_loss=0.0293
+  Epoch 5/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0007 val_loss=0.0300
+  Epoch 6/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0005 val_loss=0.0321
+  Epoch 7/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0005 val_loss=0.0321
+  Early stopping at epoch 7 (patience=5)
+Fold 2 Result: F1=0.9872, Acc=0.9935
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.65s] train_loss=0.3421 val_loss=0.0583 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0041 val_loss=0.0537
+  Epoch 3/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0012 val_loss=0.0264 *
+  Epoch 4/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0007 val_loss=0.0254
+  Epoch 5/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0005 val_loss=0.0283
+  Epoch 6/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0004 val_loss=0.0294
+  Epoch 7/100: 100%|██████████| 25/25 [2.65s] train_loss=0.0003 val_loss=0.0258
+  Epoch 8/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0003 val_loss=0.0270
+  Early stopping at epoch 8 (patience=5)
+Fold 3 Result: F1=0.9858, Acc=0.9931
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.72s] train_loss=0.3250 val_loss=0.0606 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0079 val_loss=0.0644
+  Epoch 3/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0010 val_loss=0.0615 *
+  Epoch 4/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0021 val_loss=0.0615
+  Epoch 5/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0006 val_loss=0.0718
+  Epoch 6/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0004 val_loss=0.0665
+  Epoch 7/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0003 val_loss=0.0693
+  Epoch 8/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0004 val_loss=0.0739
+  Early stopping at epoch 8 (patience=5)
+Fold 4 Result: F1=0.9567, Acc=0.9870
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.9760 +/- 0.0122
+Accuracy: 0.9902 +/- 0.0031
+
+Results saved to: results/benchmark/timechannel_exoskeletons/20260716_232224_timechannel_fewshot/fewshot/exoskeletons_ratio0.2/finetune/20260716_232937_timechannel/results.json

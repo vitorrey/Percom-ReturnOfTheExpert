@@ -1,0 +1,71 @@
+Using device: cuda:0
+Model: featunion (Feature-regression pretrain: union of all three banks (deduped))
+Weights: pretrained/featunion.pth
+Loading dataset: pamap2
+Sensors: ['hand']
+Data shape: X=(6284, 3, 150), Y=(6284,), U=(6284,)
+Classes: 12, Sensors: 1
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [17.34s] train_loss=1.5959 val_loss=1.2165 *
+  Epoch 2/100: 100%|██████████| 25/25 [17.04s] train_loss=0.6588 val_loss=0.8391
+  Epoch 3/100: 100%|██████████| 25/25 [17.03s] train_loss=0.3998 val_loss=0.7195 *
+  Epoch 4/100: 100%|██████████| 25/25 [17.02s] train_loss=0.2704 val_loss=0.6942 *
+  Epoch 5/100: 100%|██████████| 25/25 [17.02s] train_loss=0.2510 val_loss=0.6605
+  Epoch 6/100: 100%|██████████| 25/25 [17.01s] train_loss=0.2256 val_loss=0.7498 *
+  Epoch 7/100: 100%|██████████| 25/25 [17.02s] train_loss=0.1607 val_loss=0.7428
+  Epoch 8/100: 100%|██████████| 25/25 [17.04s] train_loss=0.1703 val_loss=0.7386
+  Epoch 9/100: 100%|██████████| 25/25 [17.03s] train_loss=0.1332 val_loss=0.7735
+  Epoch 10/100: 100%|██████████| 25/25 [17.04s] train_loss=0.1257 val_loss=1.0015
+  Epoch 11/100: 100%|██████████| 25/25 [17.02s] train_loss=0.1126 val_loss=0.7350
+  Early stopping at epoch 11 (patience=5)
+Fold 1 Result: F1=0.7470, Acc=0.7559
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [17.04s] train_loss=1.6156 val_loss=1.2482 *
+  Epoch 2/100: 100%|██████████| 25/25 [17.04s] train_loss=0.6633 val_loss=0.9301 *
+  Epoch 3/100: 100%|██████████| 25/25 [17.04s] train_loss=0.3542 val_loss=0.8325
+  Epoch 4/100: 100%|██████████| 25/25 [17.03s] train_loss=0.2393 val_loss=0.9116
+  Epoch 5/100: 100%|██████████| 25/25 [17.04s] train_loss=0.2082 val_loss=0.9022
+  Epoch 6/100: 100%|██████████| 25/25 [17.04s] train_loss=0.1740 val_loss=0.9210
+  Epoch 7/100: 100%|██████████| 25/25 [17.03s] train_loss=0.1614 val_loss=0.9007
+  Early stopping at epoch 7 (patience=5)
+Fold 2 Result: F1=0.6821, Acc=0.8078
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [15.72s] train_loss=1.6250 val_loss=1.5135 *
+  Epoch 2/100: 100%|██████████| 24/24 [15.69s] train_loss=0.6517 val_loss=1.3981 *
+  Epoch 3/100: 100%|██████████| 24/24 [15.70s] train_loss=0.3577 val_loss=1.4689
+  Epoch 4/100: 100%|██████████| 24/24 [15.69s] train_loss=0.2697 val_loss=1.6374
+  Epoch 5/100: 100%|██████████| 24/24 [15.69s] train_loss=0.2154 val_loss=1.6350
+  Epoch 6/100: 100%|██████████| 24/24 [15.69s] train_loss=0.1845 val_loss=1.4958
+  Epoch 7/100: 100%|██████████| 24/24 [15.69s] train_loss=0.1859 val_loss=1.3866
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.7588, Acc=0.7618
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [15.71s] train_loss=1.6058 val_loss=1.0249 *
+  Epoch 2/100: 100%|██████████| 24/24 [15.71s] train_loss=0.6424 val_loss=0.6663 *
+  Epoch 3/100: 100%|██████████| 24/24 [15.71s] train_loss=0.4098 val_loss=0.8005
+  Epoch 4/100: 100%|██████████| 24/24 [15.70s] train_loss=0.2892 val_loss=0.8006
+  Epoch 5/100: 100%|██████████| 24/24 [15.71s] train_loss=0.2360 val_loss=0.6988
+  Epoch 6/100: 100%|██████████| 24/24 [15.70s] train_loss=0.1841 val_loss=0.8267
+  Epoch 7/100: 100%|██████████| 24/24 [15.69s] train_loss=0.1763 val_loss=0.7563
+  Early stopping at epoch 7 (patience=5)
+Fold 4 Result: F1=0.6080, Acc=0.6317
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.6989 +/- 0.0601
+Accuracy: 0.7393 +/- 0.0653
+
+Results saved to: results/benchmark/featunion_pamap2/20260720_121117_featunion_position/position/pamap2_hand/finetune/20260720_123053_featunion/results.json

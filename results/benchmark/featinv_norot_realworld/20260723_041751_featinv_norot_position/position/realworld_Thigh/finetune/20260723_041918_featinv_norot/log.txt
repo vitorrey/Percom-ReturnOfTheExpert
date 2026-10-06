@@ -1,0 +1,69 @@
+Using device: cuda:0
+Model: featinv_norot (Feature-regression (invariant), no rotation aug)
+Weights: pretrained/featinv_norot.pth
+Loading dataset: realworld
+Sensors: ['Thigh']
+Data shape: X=(21181, 3, 150), Y=(21181,), U=(21181,)
+Classes: 8, Sensors: 1
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.13s] train_loss=1.1999 val_loss=0.8791 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.62s] train_loss=0.4609 val_loss=0.6796 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.75s] train_loss=0.3583 val_loss=0.7572
+  Epoch 4/100: 100%|██████████| 25/25 [0.87s] train_loss=0.3021 val_loss=0.5623
+  Epoch 5/100: 100%|██████████| 25/25 [0.85s] train_loss=0.2665 val_loss=0.8756
+  Epoch 6/100: 100%|██████████| 25/25 [0.85s] train_loss=0.2358 val_loss=0.7522
+  Epoch 7/100: 100%|██████████| 25/25 [0.83s] train_loss=0.2469 val_loss=0.6764
+  Early stopping at epoch 7 (patience=5)
+Fold 1 Result: F1=0.7532, Acc=0.7632
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.65s] train_loss=1.2448 val_loss=0.8840 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.51s] train_loss=0.4259 val_loss=0.8645 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.51s] train_loss=0.2922 val_loss=0.8786
+  Epoch 4/100: 100%|██████████| 25/25 [0.51s] train_loss=0.2551 val_loss=0.8067 *
+  Epoch 5/100: 100%|██████████| 25/25 [0.51s] train_loss=0.2290 val_loss=0.7941
+  Epoch 6/100: 100%|██████████| 25/25 [0.51s] train_loss=0.2011 val_loss=0.8807
+  Epoch 7/100: 100%|██████████| 25/25 [0.51s] train_loss=0.2066 val_loss=0.9626
+  Epoch 8/100: 100%|██████████| 25/25 [0.51s] train_loss=0.1865 val_loss=1.1063
+  Epoch 9/100: 100%|██████████| 25/25 [0.51s] train_loss=0.1772 val_loss=1.1633
+  Early stopping at epoch 9 (patience=5)
+Fold 2 Result: F1=0.7417, Acc=0.7257
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.52s] train_loss=1.2157 val_loss=1.0561 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.50s] train_loss=0.4170 val_loss=0.9519 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2600 val_loss=1.0531
+  Epoch 4/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2476 val_loss=1.5109
+  Epoch 5/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2106 val_loss=1.1052
+  Epoch 6/100: 100%|██████████| 25/25 [0.50s] train_loss=0.1871 val_loss=1.3120
+  Epoch 7/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2105 val_loss=1.1823
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.7417, Acc=0.7204
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.51s] train_loss=1.2151 val_loss=0.9304 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.51s] train_loss=0.4614 val_loss=0.5962 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.51s] train_loss=0.3447 val_loss=0.8792
+  Epoch 4/100: 100%|██████████| 25/25 [0.51s] train_loss=0.2674 val_loss=1.0076
+  Epoch 5/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2591 val_loss=0.6440
+  Epoch 6/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2371 val_loss=0.9402
+  Epoch 7/100: 100%|██████████| 25/25 [0.50s] train_loss=0.2139 val_loss=1.0205
+  Early stopping at epoch 7 (patience=5)
+Fold 4 Result: F1=0.6208, Acc=0.5818
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.7143 +/- 0.0542
+Accuracy: 0.6978 +/- 0.0690
+
+Results saved to: results/benchmark/featinv_norot_realworld/20260723_041751_featinv_norot_position/position/realworld_Thigh/finetune/20260723_041918_featinv_norot/results.json

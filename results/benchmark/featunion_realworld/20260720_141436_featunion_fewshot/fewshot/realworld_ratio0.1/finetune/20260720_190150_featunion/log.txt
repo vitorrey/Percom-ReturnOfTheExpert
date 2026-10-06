@@ -1,0 +1,69 @@
+Using device: cuda:0
+Model: featunion (Feature-regression pretrain: union of all three banks (deduped))
+Weights: pretrained/featunion.pth
+Loading dataset: realworld
+Sensors: ['Chest', 'Forearm', 'Head', 'Shin', 'Thigh', 'UpperArm', 'Waist']
+Data shape: X=(20659, 21, 150), Y=(20659,), U=(20659,)
+Classes: 8, Sensors: 7
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [118.57s] train_loss=0.5036 val_loss=0.7938 *
+  Epoch 2/100: 100%|██████████| 25/25 [118.21s] train_loss=0.0968 val_loss=1.9200
+  Epoch 3/100: 100%|██████████| 25/25 [118.22s] train_loss=0.0467 val_loss=1.5070
+  Epoch 4/100: 100%|██████████| 25/25 [118.26s] train_loss=0.0152 val_loss=1.0853
+  Epoch 5/100: 100%|██████████| 25/25 [118.29s] train_loss=0.0209 val_loss=1.2544
+  Epoch 6/100: 100%|██████████| 25/25 [118.26s] train_loss=0.0127 val_loss=1.5018
+  Early stopping at epoch 6 (patience=5)
+Fold 1 Result: F1=0.8298, Acc=0.8840
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [118.38s] train_loss=0.4709 val_loss=0.4614 *
+  Epoch 2/100: 100%|██████████| 25/25 [118.33s] train_loss=0.0566 val_loss=0.6767
+  Epoch 3/100: 100%|██████████| 25/25 [118.34s] train_loss=0.0448 val_loss=0.7839
+  Epoch 4/100: 100%|██████████| 25/25 [118.30s] train_loss=0.0343 val_loss=0.6126
+  Epoch 5/100: 100%|██████████| 25/25 [118.32s] train_loss=0.0182 val_loss=0.5999 *
+  Epoch 6/100: 100%|██████████| 25/25 [118.32s] train_loss=0.0109 val_loss=0.7354
+  Epoch 7/100: 100%|██████████| 25/25 [118.37s] train_loss=0.0058 val_loss=0.5257
+  Epoch 8/100: 100%|██████████| 25/25 [118.43s] train_loss=0.0072 val_loss=0.7412
+  Epoch 9/100: 100%|██████████| 25/25 [118.47s] train_loss=0.0044 val_loss=0.7875
+  Epoch 10/100: 100%|██████████| 25/25 [118.43s] train_loss=0.0054 val_loss=0.8112
+  Early stopping at epoch 10 (patience=5)
+Fold 2 Result: F1=0.7770, Acc=0.7653
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [118.37s] train_loss=0.4892 val_loss=0.4390 *
+  Epoch 2/100: 100%|██████████| 25/25 [118.36s] train_loss=0.0788 val_loss=0.4534 *
+  Epoch 3/100: 100%|██████████| 25/25 [118.34s] train_loss=0.0557 val_loss=0.8917
+  Epoch 4/100: 100%|██████████| 25/25 [118.33s] train_loss=0.0273 val_loss=0.6439
+  Epoch 5/100: 100%|██████████| 25/25 [118.30s] train_loss=0.0157 val_loss=0.6841
+  Epoch 6/100: 100%|██████████| 25/25 [118.29s] train_loss=0.0210 val_loss=0.7267
+  Epoch 7/100: 100%|██████████| 25/25 [118.32s] train_loss=0.0158 val_loss=0.8766
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.8762, Acc=0.8618
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [118.10s] train_loss=0.5095 val_loss=0.2839 *
+  Epoch 2/100: 100%|██████████| 25/25 [118.10s] train_loss=0.0804 val_loss=0.1724 *
+  Epoch 3/100: 100%|██████████| 25/25 [118.17s] train_loss=0.0469 val_loss=0.2193
+  Epoch 4/100: 100%|██████████| 25/25 [118.16s] train_loss=0.0376 val_loss=0.1697
+  Epoch 5/100: 100%|██████████| 25/25 [118.18s] train_loss=0.0130 val_loss=0.2520
+  Epoch 6/100: 100%|██████████| 25/25 [118.16s] train_loss=0.0081 val_loss=0.2030
+  Epoch 7/100: 100%|██████████| 25/25 [118.17s] train_loss=0.0072 val_loss=0.2133
+  Early stopping at epoch 7 (patience=5)
+Fold 4 Result: F1=0.8587, Acc=0.8500
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.8354 +/- 0.0376
+Accuracy: 0.8403 +/- 0.0450
+
+Results saved to: results/benchmark/featunion_realworld/20260720_141436_featunion_fewshot/fewshot/realworld_ratio0.1/finetune/20260720_190150_featunion/results.json

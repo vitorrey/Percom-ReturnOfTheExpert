@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: timechannel (Masked Resnet (time+channel masking))
+Weights: pretrained/timechannel.pth
+Loading dataset: pamap2
+Sensors: ['hand', 'chest', 'ankle']
+Data shape: X=(6284, 9, 150), Y=(6284,), U=(6284,)
+Classes: 12, Sensors: 3
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.20s] train_loss=1.4269 val_loss=0.7958 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.65s] train_loss=0.3017 val_loss=0.3737 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.72s] train_loss=0.2027 val_loss=0.3834
+  Epoch 4/100: 100%|██████████| 25/25 [1.65s] train_loss=0.1356 val_loss=0.4057
+  Epoch 5/100: 100%|██████████| 25/25 [1.65s] train_loss=0.1130 val_loss=0.4588
+  Epoch 6/100: 100%|██████████| 25/25 [1.64s] train_loss=0.0837 val_loss=0.3696
+  Epoch 7/100: 100%|██████████| 25/25 [1.64s] train_loss=0.0752 val_loss=0.3720
+  Early stopping at epoch 7 (patience=5)
+Fold 1 Result: F1=0.8561, Acc=0.8571
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.71s] train_loss=1.4545 val_loss=0.9214 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.69s] train_loss=0.3207 val_loss=0.5142 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.69s] train_loss=0.1838 val_loss=0.4817 *
+  Epoch 4/100: 100%|██████████| 25/25 [1.69s] train_loss=0.1505 val_loss=0.4239
+  Epoch 5/100: 100%|██████████| 25/25 [1.69s] train_loss=0.1064 val_loss=0.4306
+  Epoch 6/100: 100%|██████████| 25/25 [1.69s] train_loss=0.0955 val_loss=0.4785
+  Epoch 7/100: 100%|██████████| 25/25 [1.69s] train_loss=0.0893 val_loss=0.4689
+  Epoch 8/100: 100%|██████████| 25/25 [1.70s] train_loss=0.0731 val_loss=0.4432
+  Early stopping at epoch 8 (patience=5)
+Fold 2 Result: F1=0.8086, Acc=0.8711
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [1.66s] train_loss=1.4720 val_loss=1.0186 *
+  Epoch 2/100: 100%|██████████| 24/24 [1.60s] train_loss=0.3576 val_loss=0.6389 *
+  Epoch 3/100: 100%|██████████| 24/24 [1.60s] train_loss=0.2058 val_loss=0.6582
+  Epoch 4/100: 100%|██████████| 24/24 [1.60s] train_loss=0.1431 val_loss=0.8641
+  Epoch 5/100: 100%|██████████| 24/24 [1.60s] train_loss=0.1154 val_loss=0.7213
+  Epoch 6/100: 100%|██████████| 24/24 [1.61s] train_loss=0.1082 val_loss=0.7398
+  Epoch 7/100: 100%|██████████| 24/24 [1.60s] train_loss=0.0804 val_loss=0.6193
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.8971, Acc=0.8907
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [1.64s] train_loss=1.3854 val_loss=0.8644 *
+  Epoch 2/100: 100%|██████████| 24/24 [1.60s] train_loss=0.2987 val_loss=0.6038 *
+  Epoch 3/100: 100%|██████████| 24/24 [1.60s] train_loss=0.1700 val_loss=0.6247
+  Epoch 4/100: 100%|██████████| 24/24 [1.61s] train_loss=0.1254 val_loss=0.5292 *
+  Epoch 5/100: 100%|██████████| 24/24 [1.60s] train_loss=0.1008 val_loss=0.5765
+  Epoch 6/100: 100%|██████████| 24/24 [1.60s] train_loss=0.0825 val_loss=0.5916
+  Epoch 7/100: 100%|██████████| 24/24 [1.61s] train_loss=0.0772 val_loss=0.5552
+  Epoch 8/100: 100%|██████████| 24/24 [1.71s] train_loss=0.0589 val_loss=0.7043
+  Epoch 9/100: 100%|██████████| 24/24 [1.61s] train_loss=0.0537 val_loss=0.5764
+  Early stopping at epoch 9 (patience=5)
+Fold 4 Result: F1=0.7439, Acc=0.7909
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.8264 +/- 0.0570
+Accuracy: 0.8524 +/- 0.0375
+
+Results saved to: results/benchmark/timechannel_pamap2/20260716_225519_timechannel_average/average/pamap2/finetune/20260716_225522_timechannel/results.json

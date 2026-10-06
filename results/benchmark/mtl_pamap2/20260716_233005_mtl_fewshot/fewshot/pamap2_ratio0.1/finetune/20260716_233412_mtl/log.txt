@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: mtl (Multi-Task Learning pretrained ResNet)
+Weights: pretrained/mtl.pth
+Loading dataset: pamap2
+Sensors: ['hand', 'chest', 'ankle']
+Data shape: X=(6284, 9, 150), Y=(6284,), U=(6284,)
+Classes: 12, Sensors: 3
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.15s] train_loss=1.5722 val_loss=1.1502 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.63s] train_loss=0.2784 val_loss=0.5248 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.71s] train_loss=0.0356 val_loss=0.5024
+  Epoch 4/100: 100%|██████████| 25/25 [1.63s] train_loss=0.0127 val_loss=0.4939
+  Epoch 5/100: 100%|██████████| 25/25 [1.63s] train_loss=0.0076 val_loss=0.4407
+  Epoch 6/100: 100%|██████████| 25/25 [1.63s] train_loss=0.0051 val_loss=0.4455
+  Epoch 7/100: 100%|██████████| 25/25 [1.63s] train_loss=0.0038 val_loss=0.4667
+  Early stopping at epoch 7 (patience=5)
+Fold 1 Result: F1=0.7572, Acc=0.7462
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.71s] train_loss=1.5821 val_loss=1.0721 *
+  Epoch 2/100: 100%|██████████| 25/25 [1.68s] train_loss=0.2583 val_loss=0.5907 *
+  Epoch 3/100: 100%|██████████| 25/25 [1.68s] train_loss=0.0348 val_loss=0.4936 *
+  Epoch 4/100: 100%|██████████| 25/25 [1.67s] train_loss=0.0126 val_loss=0.4997
+  Epoch 5/100: 100%|██████████| 25/25 [1.67s] train_loss=0.0077 val_loss=0.4825
+  Epoch 6/100: 100%|██████████| 25/25 [1.67s] train_loss=0.0050 val_loss=0.4959
+  Epoch 7/100: 100%|██████████| 25/25 [1.67s] train_loss=0.0035 val_loss=0.4844
+  Epoch 8/100: 100%|██████████| 25/25 [1.67s] train_loss=0.0031 val_loss=0.4894
+  Early stopping at epoch 8 (patience=5)
+Fold 2 Result: F1=0.9135, Acc=0.9062
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [1.66s] train_loss=1.6386 val_loss=1.0806 *
+  Epoch 2/100: 100%|██████████| 24/24 [1.58s] train_loss=0.2806 val_loss=0.5422 *
+  Epoch 3/100: 100%|██████████| 24/24 [1.59s] train_loss=0.0372 val_loss=0.4851
+  Epoch 4/100: 100%|██████████| 24/24 [1.59s] train_loss=0.0146 val_loss=0.4383
+  Epoch 5/100: 100%|██████████| 24/24 [1.59s] train_loss=0.0081 val_loss=0.4533
+  Epoch 6/100: 100%|██████████| 24/24 [1.59s] train_loss=0.0060 val_loss=0.4453
+  Epoch 7/100: 100%|██████████| 24/24 [1.59s] train_loss=0.0043 val_loss=0.4287
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.8880, Acc=0.8836
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [1.63s] train_loss=1.6021 val_loss=1.1940 *
+  Epoch 2/100: 100%|██████████| 24/24 [1.59s] train_loss=0.2889 val_loss=0.6444 *
+  Epoch 3/100: 100%|██████████| 24/24 [1.59s] train_loss=0.0415 val_loss=0.5669 *
+  Epoch 4/100: 100%|██████████| 24/24 [1.59s] train_loss=0.0152 val_loss=0.5612 *
+  Epoch 5/100: 100%|██████████| 24/24 [1.59s] train_loss=0.0080 val_loss=0.5454
+  Epoch 6/100: 100%|██████████| 24/24 [1.59s] train_loss=0.0058 val_loss=0.5322
+  Epoch 7/100: 100%|██████████| 24/24 [1.59s] train_loss=0.0044 val_loss=0.5493
+  Epoch 8/100: 100%|██████████| 24/24 [1.67s] train_loss=0.0035 val_loss=0.5998
+  Epoch 9/100: 100%|██████████| 24/24 [1.60s] train_loss=0.0027 val_loss=0.5587
+  Early stopping at epoch 9 (patience=5)
+Fold 4 Result: F1=0.8318, Acc=0.8745
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.8476 +/- 0.0600
+Accuracy: 0.8526 +/- 0.0625
+
+Results saved to: results/benchmark/mtl_pamap2/20260716_233005_mtl_fewshot/fewshot/pamap2_ratio0.1/finetune/20260716_233412_mtl/results.json

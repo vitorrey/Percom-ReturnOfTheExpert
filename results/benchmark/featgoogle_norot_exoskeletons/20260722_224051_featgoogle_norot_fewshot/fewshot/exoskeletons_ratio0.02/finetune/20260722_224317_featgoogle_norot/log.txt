@@ -1,0 +1,69 @@
+Using device: cuda:0
+Model: featgoogle_norot (Feature-regression (industry), no rotation aug)
+Weights: pretrained/featgoogle_norot.pth
+Loading dataset: exoskeletons
+Sensors: ['Chest', 'RightLeg', 'LeftLeg', 'RightWrist', 'LeftWrist']
+Data shape: X=(5678, 15, 150), Y=(5678,), U=(5678,)
+Classes: 4, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [3.24s] train_loss=0.2062 val_loss=0.0758 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.75s] train_loss=0.0006 val_loss=0.0760
+  Epoch 3/100: 100%|██████████| 25/25 [2.71s] train_loss=0.0003 val_loss=0.0856
+  Epoch 4/100: 100%|██████████| 25/25 [2.74s] train_loss=0.0002 val_loss=0.0777
+  Epoch 5/100: 100%|██████████| 25/25 [2.74s] train_loss=0.0002 val_loss=0.0849
+  Epoch 6/100: 100%|██████████| 25/25 [2.75s] train_loss=0.0002 val_loss=0.0791
+  Early stopping at epoch 6 (patience=5)
+Fold 1 Result: F1=0.8754, Acc=0.9657
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.74s] train_loss=0.2202 val_loss=0.1207 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.68s] train_loss=0.0007 val_loss=0.1322 *
+  Epoch 3/100: 100%|██████████| 25/25 [2.60s] train_loss=0.0003 val_loss=0.1263 *
+  Epoch 4/100: 100%|██████████| 25/25 [2.59s] train_loss=0.0003 val_loss=0.1277 *
+  Epoch 5/100: 100%|██████████| 25/25 [2.60s] train_loss=0.0002 val_loss=0.1306
+  Epoch 6/100: 100%|██████████| 25/25 [2.60s] train_loss=0.0002 val_loss=0.1238 *
+  Epoch 7/100: 100%|██████████| 25/25 [2.59s] train_loss=0.0002 val_loss=0.1345
+  Epoch 8/100: 100%|██████████| 25/25 [2.60s] train_loss=0.0002 val_loss=0.1341
+  Epoch 9/100: 100%|██████████| 25/25 [2.60s] train_loss=0.0001 val_loss=0.1376
+  Epoch 10/100: 100%|██████████| 25/25 [2.60s] train_loss=0.0002 val_loss=0.1366
+  Epoch 11/100: 100%|██████████| 25/25 [2.59s] train_loss=0.0001 val_loss=0.1388
+  Early stopping at epoch 11 (patience=5)
+Fold 2 Result: F1=0.8518, Acc=0.9597
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.63s] train_loss=0.2339 val_loss=0.1080 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0009 val_loss=0.0884 *
+  Epoch 3/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0004 val_loss=0.0947
+  Epoch 4/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0002 val_loss=0.0992
+  Epoch 5/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0002 val_loss=0.0850
+  Epoch 6/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0002 val_loss=0.0988
+  Epoch 7/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0002 val_loss=0.1020
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.8832, Acc=0.9712
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.61s] train_loss=0.2188 val_loss=0.0801 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0007 val_loss=0.0942
+  Epoch 3/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0003 val_loss=0.0864
+  Epoch 4/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0003 val_loss=0.0909
+  Epoch 5/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0002 val_loss=0.0990
+  Epoch 6/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0002 val_loss=0.0928
+  Early stopping at epoch 6 (patience=5)
+Fold 4 Result: F1=0.9512, Acc=0.9795
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.8904 +/- 0.0370
+Accuracy: 0.9690 +/- 0.0073
+
+Results saved to: results/benchmark/featgoogle_norot_exoskeletons/20260722_224051_featgoogle_norot_fewshot/fewshot/exoskeletons_ratio0.02/finetune/20260722_224317_featgoogle_norot/results.json

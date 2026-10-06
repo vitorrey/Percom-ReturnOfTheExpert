@@ -1,0 +1,68 @@
+Using device: cuda:0
+Model: featgoogle (Feature-regression pretrain: industry motion feature bank)
+Weights: pretrained/featgoogle.pth
+Loading dataset: realworld
+Sensors: ['Chest', 'Forearm', 'Head', 'Shin', 'Thigh', 'UpperArm', 'Waist']
+Data shape: X=(20659, 21, 150), Y=(20659,), U=(20659,)
+Classes: 8, Sensors: 7
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [118.76s] train_loss=0.5673 val_loss=0.9340 *
+  Epoch 2/100: 100%|██████████| 25/25 [118.43s] train_loss=0.1095 val_loss=0.6093 *
+  Epoch 3/100: 100%|██████████| 25/25 [118.44s] train_loss=0.0600 val_loss=1.7945
+  Epoch 4/100: 100%|██████████| 25/25 [118.45s] train_loss=0.0200 val_loss=0.9123
+  Epoch 5/100: 100%|██████████| 25/25 [118.45s] train_loss=0.0260 val_loss=1.1966
+  Epoch 6/100: 100%|██████████| 25/25 [118.43s] train_loss=0.0132 val_loss=1.4672
+  Epoch 7/100: 100%|██████████| 25/25 [118.47s] train_loss=0.0044 val_loss=1.4958
+  Early stopping at epoch 7 (patience=5)
+Fold 1 Result: F1=0.9527, Acc=0.9633
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [118.60s] train_loss=0.5313 val_loss=0.5271 *
+  Epoch 2/100: 100%|██████████| 25/25 [118.56s] train_loss=0.0737 val_loss=0.5386
+  Epoch 3/100: 100%|██████████| 25/25 [118.55s] train_loss=0.0373 val_loss=0.5575 *
+  Epoch 4/100: 100%|██████████| 25/25 [118.57s] train_loss=0.0296 val_loss=0.6707
+  Epoch 5/100: 100%|██████████| 25/25 [118.58s] train_loss=0.0163 val_loss=0.5953
+  Epoch 6/100: 100%|██████████| 25/25 [118.54s] train_loss=0.0124 val_loss=0.6574
+  Epoch 7/100: 100%|██████████| 25/25 [118.54s] train_loss=0.0065 val_loss=0.9000
+  Epoch 8/100: 100%|██████████| 25/25 [118.56s] train_loss=0.0025 val_loss=0.9207
+  Early stopping at epoch 8 (patience=5)
+Fold 2 Result: F1=0.7830, Acc=0.7612
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [118.52s] train_loss=0.5405 val_loss=0.4803 *
+  Epoch 2/100: 100%|██████████| 25/25 [118.44s] train_loss=0.0909 val_loss=0.4635 *
+  Epoch 3/100: 100%|██████████| 25/25 [118.47s] train_loss=0.0485 val_loss=0.5444
+  Epoch 4/100: 100%|██████████| 25/25 [118.48s] train_loss=0.0301 val_loss=0.6971
+  Epoch 5/100: 100%|██████████| 25/25 [118.61s] train_loss=0.0135 val_loss=0.5659
+  Epoch 6/100: 100%|██████████| 25/25 [118.47s] train_loss=0.0159 val_loss=0.6190
+  Epoch 7/100: 100%|██████████| 25/25 [118.48s] train_loss=0.0190 val_loss=0.7425
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.8665, Acc=0.8486
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [118.35s] train_loss=0.5670 val_loss=0.2273 *
+  Epoch 2/100: 100%|██████████| 25/25 [118.37s] train_loss=0.0958 val_loss=0.1869 *
+  Epoch 3/100: 100%|██████████| 25/25 [118.45s] train_loss=0.0469 val_loss=0.2312
+  Epoch 4/100: 100%|██████████| 25/25 [118.59s] train_loss=0.0296 val_loss=0.2278
+  Epoch 5/100: 100%|██████████| 25/25 [118.39s] train_loss=0.0269 val_loss=0.3089
+  Epoch 6/100: 100%|██████████| 25/25 [118.35s] train_loss=0.0135 val_loss=0.2519
+  Epoch 7/100: 100%|██████████| 25/25 [118.34s] train_loss=0.0099 val_loss=0.2796
+  Early stopping at epoch 7 (patience=5)
+Fold 4 Result: F1=0.8652, Acc=0.8584
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.8668 +/- 0.0600
+Accuracy: 0.8579 +/- 0.0717
+
+Results saved to: results/benchmark/featgoogle_realworld/20260718_205354_featgoogle_fewshot/fewshot/realworld_ratio0.1/finetune/20260719_002953_featgoogle/results.json

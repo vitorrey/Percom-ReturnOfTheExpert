@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: mtl (Multi-Task Learning pretrained ResNet)
+Weights: pretrained/mtl.pth
+Loading dataset: exoskeletons
+Sensors: ['Chest', 'RightLeg', 'LeftLeg', 'RightWrist', 'LeftWrist']
+Data shape: X=(5678, 15, 150), Y=(5678,), U=(5678,)
+Classes: 4, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [3.25s] train_loss=0.3690 val_loss=0.0684 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0026 val_loss=0.0518 *
+  Epoch 3/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0009 val_loss=0.0498
+  Epoch 4/100: 100%|██████████| 25/25 [2.66s] train_loss=0.0007 val_loss=0.0552
+  Epoch 5/100: 100%|██████████| 25/25 [2.66s] train_loss=0.0005 val_loss=0.0490
+  Epoch 6/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0004 val_loss=0.0485
+  Epoch 7/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0003 val_loss=0.0458
+  Early stopping at epoch 7 (patience=5)
+Fold 1 Result: F1=0.9814, Acc=0.9912
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.63s] train_loss=0.3382 val_loss=0.0607 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.60s] train_loss=0.0020 val_loss=0.0458
+  Epoch 3/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0008 val_loss=0.0467
+  Epoch 4/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0006 val_loss=0.0449
+  Epoch 5/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0005 val_loss=0.0453
+  Epoch 6/100: 100%|██████████| 25/25 [2.61s] train_loss=0.0004 val_loss=0.0441
+  Early stopping at epoch 6 (patience=5)
+Fold 2 Result: F1=0.9498, Acc=0.9782
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.65s] train_loss=0.3797 val_loss=0.0588 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0030 val_loss=0.0359 *
+  Epoch 3/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0009 val_loss=0.0433
+  Epoch 4/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0007 val_loss=0.0359 *
+  Epoch 5/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0005 val_loss=0.0315 *
+  Epoch 6/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0004 val_loss=0.0372
+  Epoch 7/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0004 val_loss=0.0339
+  Epoch 8/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0003 val_loss=0.0365
+  Epoch 9/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0003 val_loss=0.0311
+  Epoch 10/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0003 val_loss=0.0300
+  Early stopping at epoch 10 (patience=5)
+Fold 3 Result: F1=0.9829, Acc=0.9931
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [2.73s] train_loss=0.3565 val_loss=0.0814 *
+  Epoch 2/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0028 val_loss=0.0675 *
+  Epoch 3/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0009 val_loss=0.0673 *
+  Epoch 4/100: 100%|██████████| 25/25 [2.63s] train_loss=0.0007 val_loss=0.0691
+  Epoch 5/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0005 val_loss=0.0657
+  Epoch 6/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0004 val_loss=0.0670
+  Epoch 7/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0003 val_loss=0.0664
+  Epoch 8/100: 100%|██████████| 25/25 [2.62s] train_loss=0.0003 val_loss=0.0665
+  Early stopping at epoch 8 (patience=5)
+Fold 4 Result: F1=0.9722, Acc=0.9914
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.9716 +/- 0.0132
+Accuracy: 0.9885 +/- 0.0060
+
+Results saved to: results/benchmark/mtl_exoskeletons/20260716_234238_mtl_fewshot/fewshot/exoskeletons_ratio0.05/finetune/20260716_234623_mtl/results.json

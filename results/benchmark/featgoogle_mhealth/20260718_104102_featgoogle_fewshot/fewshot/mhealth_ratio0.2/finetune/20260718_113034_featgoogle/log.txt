@@ -1,0 +1,71 @@
+Using device: cuda:0
+Model: featgoogle (Feature-regression pretrain: industry motion feature bank)
+Weights: pretrained/featgoogle.pth
+Loading dataset: mhealth
+Sensors: ['Chest', 'LeftAnkle', 'RightWrist']
+Data shape: X=(2117, 9, 150), Y=(2117,), U=(2117,)
+Classes: 12, Sensors: 3
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 10/10 [18.72s] train_loss=1.6351 val_loss=1.0949 *
+  Epoch 2/100: 100%|██████████| 10/10 [18.40s] train_loss=0.4786 val_loss=0.4681
+  Epoch 3/100: 100%|██████████| 10/10 [18.39s] train_loss=0.1158 val_loss=0.4378 *
+  Epoch 4/100: 100%|██████████| 10/10 [18.41s] train_loss=0.0378 val_loss=0.4370
+  Epoch 5/100: 100%|██████████| 10/10 [18.40s] train_loss=0.0169 val_loss=0.3845
+  Epoch 6/100: 100%|██████████| 10/10 [18.40s] train_loss=0.0107 val_loss=0.4788
+  Epoch 7/100: 100%|██████████| 10/10 [18.40s] train_loss=0.0079 val_loss=0.5122
+  Epoch 8/100: 100%|██████████| 10/10 [18.40s] train_loss=0.0070 val_loss=0.5395
+  Early stopping at epoch 8 (patience=5)
+Fold 1 Result: F1=0.9571, Acc=0.9566
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 10/10 [18.44s] train_loss=1.6258 val_loss=1.0936 *
+  Epoch 2/100: 100%|██████████| 10/10 [18.43s] train_loss=0.4953 val_loss=0.2978 *
+  Epoch 3/100: 100%|██████████| 10/10 [18.44s] train_loss=0.1143 val_loss=0.1743
+  Epoch 4/100: 100%|██████████| 10/10 [18.43s] train_loss=0.0384 val_loss=0.0960
+  Epoch 5/100: 100%|██████████| 10/10 [18.42s] train_loss=0.0210 val_loss=0.0520 *
+  Epoch 6/100: 100%|██████████| 10/10 [18.43s] train_loss=0.0163 val_loss=0.1660
+  Epoch 7/100: 100%|██████████| 10/10 [18.41s] train_loss=0.0103 val_loss=0.0607
+  Epoch 8/100: 100%|██████████| 10/10 [18.42s] train_loss=0.0080 val_loss=0.1211
+  Epoch 9/100: 100%|██████████| 10/10 [18.42s] train_loss=0.0063 val_loss=0.1382
+  Epoch 10/100: 100%|██████████| 10/10 [18.43s] train_loss=0.0052 val_loss=0.1104
+  Early stopping at epoch 10 (patience=5)
+Fold 2 Result: F1=0.9332, Acc=0.9339
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 11/11 [20.45s] train_loss=1.6202 val_loss=1.0086 *
+  Epoch 2/100: 100%|██████████| 11/11 [20.41s] train_loss=0.4301 val_loss=0.2774 *
+  Epoch 3/100: 100%|██████████| 11/11 [20.41s] train_loss=0.1086 val_loss=0.2226
+  Epoch 4/100: 100%|██████████| 11/11 [20.41s] train_loss=0.0430 val_loss=0.1154
+  Epoch 5/100: 100%|██████████| 11/11 [20.41s] train_loss=0.0516 val_loss=0.2005
+  Epoch 6/100: 100%|██████████| 11/11 [20.41s] train_loss=0.0557 val_loss=0.1011
+  Epoch 7/100: 100%|██████████| 11/11 [20.41s] train_loss=0.0235 val_loss=0.0925
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.9556, Acc=0.9535
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 10/10 [18.42s] train_loss=1.6121 val_loss=1.1036 *
+  Epoch 2/100: 100%|██████████| 10/10 [18.42s] train_loss=0.4800 val_loss=0.3329 *
+  Epoch 3/100: 100%|██████████| 10/10 [18.43s] train_loss=0.1087 val_loss=0.1926
+  Epoch 4/100: 100%|██████████| 10/10 [18.43s] train_loss=0.0392 val_loss=0.1677
+  Epoch 5/100: 100%|██████████| 10/10 [18.42s] train_loss=0.0215 val_loss=0.2390
+  Epoch 6/100: 100%|██████████| 10/10 [18.42s] train_loss=0.0153 val_loss=0.2074
+  Epoch 7/100: 100%|██████████| 10/10 [18.42s] train_loss=0.0097 val_loss=0.1384
+  Early stopping at epoch 7 (patience=5)
+Fold 4 Result: F1=1.0000, Acc=1.0000
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.9615 +/- 0.0242
+Accuracy: 0.9610 +/- 0.0241
+
+Results saved to: results/benchmark/featgoogle_mhealth/20260718_104102_featgoogle_fewshot/fewshot/mhealth_ratio0.2/finetune/20260718_113034_featgoogle/results.json

@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: timechannel (Masked Resnet (time+channel masking))
+Weights: pretrained/timechannel.pth
+Loading dataset: realworld
+Sensors: ['Thigh']
+Data shape: X=(21181, 3, 150), Y=(21181,), U=(21181,)
+Classes: 8, Sensors: 1
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [1.12s] train_loss=1.5246 val_loss=1.0509 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.68s] train_loss=0.6552 val_loss=0.7203 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.67s] train_loss=0.4039 val_loss=0.6995
+  Epoch 4/100: 100%|██████████| 25/25 [0.66s] train_loss=0.3121 val_loss=0.5494
+  Epoch 5/100: 100%|██████████| 25/25 [0.67s] train_loss=0.2720 val_loss=0.7950
+  Epoch 6/100: 100%|██████████| 25/25 [0.66s] train_loss=0.2589 val_loss=0.6710
+  Epoch 7/100: 100%|██████████| 25/25 [0.66s] train_loss=0.2509 val_loss=0.6439
+  Early stopping at epoch 7 (patience=5)
+Fold 1 Result: F1=0.7735, Acc=0.7864
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.70s] train_loss=1.5342 val_loss=1.1112 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.68s] train_loss=0.6636 val_loss=0.7528 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.68s] train_loss=0.3596 val_loss=0.8578 *
+  Epoch 4/100: 100%|██████████| 25/25 [0.68s] train_loss=0.3015 val_loss=0.7260
+  Epoch 5/100: 100%|██████████| 25/25 [0.68s] train_loss=0.2556 val_loss=0.7278
+  Epoch 6/100: 100%|██████████| 25/25 [0.68s] train_loss=0.2090 val_loss=0.9479
+  Epoch 7/100: 100%|██████████| 25/25 [0.68s] train_loss=0.2321 val_loss=0.8420
+  Epoch 8/100: 100%|██████████| 25/25 [0.68s] train_loss=0.1922 val_loss=0.9428
+  Early stopping at epoch 8 (patience=5)
+Fold 2 Result: F1=0.7471, Acc=0.7276
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.69s] train_loss=1.5024 val_loss=1.3634 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.68s] train_loss=0.6860 val_loss=1.1537 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.67s] train_loss=0.3555 val_loss=1.1249 *
+  Epoch 4/100: 100%|██████████| 25/25 [0.67s] train_loss=0.2525 val_loss=1.3906
+  Epoch 5/100: 100%|██████████| 25/25 [0.67s] train_loss=0.2578 val_loss=1.6559
+  Epoch 6/100: 100%|██████████| 25/25 [0.67s] train_loss=0.2103 val_loss=1.5254
+  Epoch 7/100: 100%|██████████| 25/25 [0.67s] train_loss=0.2124 val_loss=1.5075
+  Epoch 8/100: 100%|██████████| 25/25 [0.69s] train_loss=0.2080 val_loss=1.6833
+  Early stopping at epoch 8 (patience=5)
+Fold 3 Result: F1=0.7287, Acc=0.6951
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 25/25 [0.68s] train_loss=1.5051 val_loss=1.0774 *
+  Epoch 2/100: 100%|██████████| 25/25 [0.68s] train_loss=0.6420 val_loss=0.6850 *
+  Epoch 3/100: 100%|██████████| 25/25 [0.68s] train_loss=0.3736 val_loss=0.9481 *
+  Epoch 4/100: 100%|██████████| 25/25 [0.68s] train_loss=0.2954 val_loss=0.9288
+  Epoch 5/100: 100%|██████████| 25/25 [0.68s] train_loss=0.2837 val_loss=0.9188
+  Epoch 6/100: 100%|██████████| 25/25 [0.68s] train_loss=0.2548 val_loss=1.0678
+  Epoch 7/100: 100%|██████████| 25/25 [0.68s] train_loss=0.2424 val_loss=1.3186
+  Epoch 8/100: 100%|██████████| 25/25 [0.67s] train_loss=0.2298 val_loss=1.4626
+  Early stopping at epoch 8 (patience=5)
+Fold 4 Result: F1=0.6326, Acc=0.6123
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.7205 +/- 0.0532
+Accuracy: 0.7053 +/- 0.0629
+
+Results saved to: results/benchmark/timechannel_realworld/20260716_225746_timechannel_position/position/realworld_Thigh/finetune/20260716_225929_timechannel/results.json

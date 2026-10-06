@@ -1,0 +1,70 @@
+Using device: cuda:0
+Model: mtl (Multi-Task Learning pretrained ResNet)
+Weights: pretrained/mtl.pth
+Loading dataset: forthtrace
+Sensors: ['LeftWrist', 'RightWrist', 'Torso', 'RightThigh', 'LeftAnkle']
+Data shape: X=(4142, 15, 150), Y=(4142,), U=(4142,)
+Classes: 11, Sensors: 5
+
+============================================================
+Fold 1/4: test_users=[1, 2], val_users=[3, 4]
+============================================================
+  Epoch 1/100: 100%|██████████| 23/23 [2.93s] train_loss=1.2455 val_loss=1.0784 *
+  Epoch 2/100: 100%|██████████| 23/23 [2.37s] train_loss=0.0885 val_loss=1.0750
+  Epoch 3/100: 100%|██████████| 23/23 [2.37s] train_loss=0.0091 val_loss=0.9881 *
+  Epoch 4/100: 100%|██████████| 23/23 [2.37s] train_loss=0.0045 val_loss=0.9968
+  Epoch 5/100: 100%|██████████| 23/23 [2.37s] train_loss=0.0031 val_loss=0.9617 *
+  Epoch 6/100: 100%|██████████| 23/23 [2.37s] train_loss=0.0025 val_loss=1.0109
+  Epoch 7/100: 100%|██████████| 23/23 [2.37s] train_loss=0.0019 val_loss=0.9935
+  Epoch 8/100: 100%|██████████| 23/23 [2.37s] train_loss=0.0015 val_loss=1.0505
+  Epoch 9/100: 100%|██████████| 23/23 [2.37s] train_loss=0.0014 val_loss=1.0588
+  Epoch 10/100: 100%|██████████| 23/23 [2.37s] train_loss=0.0012 val_loss=0.9994
+  Early stopping at epoch 10 (patience=5)
+Fold 1 Result: F1=0.4328, Acc=0.6264
+
+============================================================
+Fold 2/4: test_users=[3, 4], val_users=[5, 6]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [2.49s] train_loss=1.1803 val_loss=1.0387 *
+  Epoch 2/100: 100%|██████████| 24/24 [2.44s] train_loss=0.0733 val_loss=0.7877 *
+  Epoch 3/100: 100%|██████████| 24/24 [2.44s] train_loss=0.0079 val_loss=0.7438 *
+  Epoch 4/100: 100%|██████████| 24/24 [2.43s] train_loss=0.0038 val_loss=0.7867
+  Epoch 5/100: 100%|██████████| 24/24 [2.43s] train_loss=0.0031 val_loss=0.7821
+  Epoch 6/100: 100%|██████████| 24/24 [2.43s] train_loss=0.0023 val_loss=0.7740
+  Epoch 7/100: 100%|██████████| 24/24 [2.44s] train_loss=0.0020 val_loss=0.7948
+  Epoch 8/100: 100%|██████████| 24/24 [2.44s] train_loss=0.0017 val_loss=0.8042
+  Early stopping at epoch 8 (patience=5)
+Fold 2 Result: F1=0.4682, Acc=0.7322
+
+============================================================
+Fold 3/4: test_users=[5, 6], val_users=[7, 8]
+============================================================
+  Epoch 1/100: 100%|██████████| 24/24 [2.51s] train_loss=1.1893 val_loss=1.0186 *
+  Epoch 2/100: 100%|██████████| 24/24 [2.46s] train_loss=0.0819 val_loss=0.7256 *
+  Epoch 3/100: 100%|██████████| 24/24 [2.47s] train_loss=0.0093 val_loss=0.7050
+  Epoch 4/100: 100%|██████████| 24/24 [2.46s] train_loss=0.0045 val_loss=0.6737
+  Epoch 5/100: 100%|██████████| 24/24 [2.46s] train_loss=0.0031 val_loss=0.6964
+  Epoch 6/100: 100%|██████████| 24/24 [2.46s] train_loss=0.0022 val_loss=0.6744
+  Epoch 7/100: 100%|██████████| 24/24 [2.46s] train_loss=0.0017 val_loss=0.7080
+  Early stopping at epoch 7 (patience=5)
+Fold 3 Result: F1=0.5023, Acc=0.7221
+
+============================================================
+Fold 4/4: test_users=[7, 8], val_users=[1, 2]
+============================================================
+  Epoch 1/100: 100%|██████████| 23/23 [2.39s] train_loss=1.2486 val_loss=1.1343 *
+  Epoch 2/100: 100%|██████████| 23/23 [2.36s] train_loss=0.0870 val_loss=0.9231
+  Epoch 3/100: 100%|██████████| 23/23 [2.36s] train_loss=0.0093 val_loss=1.0822
+  Epoch 4/100: 100%|██████████| 23/23 [2.36s] train_loss=0.0043 val_loss=1.0417
+  Epoch 5/100: 100%|██████████| 23/23 [2.35s] train_loss=0.0032 val_loss=1.0760
+  Epoch 6/100: 100%|██████████| 23/23 [2.35s] train_loss=0.0026 val_loss=1.0476
+  Early stopping at epoch 6 (patience=5)
+Fold 4 Result: F1=0.5044, Acc=0.6806
+
+============================================================
+Final Results (4-fold CV)
+============================================================
+Macro F1: 0.4769 +/- 0.0293
+Accuracy: 0.6903 +/- 0.0417
+
+Results saved to: results/benchmark/mtl_forthtrace/20260716_232424_mtl_fewshot/fewshot/forthtrace_ratio0.05/finetune/20260716_232746_mtl/results.json
